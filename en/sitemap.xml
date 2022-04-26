@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lorenzobalzani.github.io/</loc>
-    <lastmod>2022-03-18T21:47:41+00:00</lastmod>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -15,359 +15,8 @@
                 href="https://lorenzobalzani.github.io/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/demo/</loc>
-    <lastmod>2022-03-18T21:47:41+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/demo/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/</loc>
-    <lastmod>2022-03-18T21:47:41+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/shortcode/</loc>
-    <lastmod>2022-03-18T21:47:41+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/shortcode/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/shortcode/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/</loc>
-    <lastmod>2022-03-18T21:47:41+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/notice-shortcode/</loc>
-    <lastmod>2022-03-18T21:47:41+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/notice-shortcode/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/notice-shortcode/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/series/</loc>
-    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/series/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/series-part-2/</loc>
-    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/series-part-2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/series-part-2/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/series/series-setup/</loc>
-    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/series/series-setup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/series/series-setup/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/series-part-1/</loc>
-    <lastmod>2021-08-14T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/series-part-1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/series-part-1/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/redirect/</loc>
-    <lastmod>2021-06-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/redirect/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/redirect/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/redirect/</loc>
-    <lastmod>2021-06-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/redirect/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/redirect/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/redirecturl/</loc>
-    <lastmod>2021-06-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/redirecturl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/redirecturl/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/figure-shortcode/</loc>
-    <lastmod>2021-03-13T21:47:41+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/figure-shortcode/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/figure-shortcode/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/archives/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/archives/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/categories/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/css/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/html/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/markdown/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/markdown-syntax/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/categories/syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/categories/syntax/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/categories/themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/categories/themes/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/series/themes-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/series/themes-guide/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/series/themes-guide/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/privacy/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/privacy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/privacy/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/rich-content/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/rich-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/rich-content/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/shortcodes/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/shortcodes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/shortcodes/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/placeholder-text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/placeholder-text/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/text/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/text/"
-                />
-  </url><url>
     <loc>https://lorenzobalzani.github.io/contact/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -379,73 +28,37 @@
                 href="https://lorenzobalzani.github.io/contact/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/post/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
+    <loc>https://lorenzobalzani.github.io/post/introduction/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/tags/me/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/math-typesetting/"
+                href="https://lorenzobalzani.github.io/it/tags/me/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lorenzobalzani.github.io/post/math-typesetting/"
+                href="https://lorenzobalzani.github.io/tags/me/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>https://lorenzobalzani.github.io/post/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/emoji/"
+                href="https://lorenzobalzani.github.io/it/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/emoji/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/emoji-support/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/emoji-support/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/post/image-test/</loc>
-    <lastmod>2019-03-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/image-test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/image-test/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/thumbnail/</loc>
-    <lastmod>2019-03-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/thumbnail/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/thumbnail/"
+                href="https://lorenzobalzani.github.io/post/"
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/resume/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -457,17 +70,29 @@
                 href="https://lorenzobalzani.github.io/resume/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/imprint/</loc>
-    <priority>0</priority>
+    <loc>https://lorenzobalzani.github.io/tags/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
-                href="https://lorenzobalzani.github.io/it/imprint/"
+                href="https://lorenzobalzani.github.io/it/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lorenzobalzani.github.io/imprint/"
+                href="https://lorenzobalzani.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/categories/"
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/index/</loc>
@@ -492,6 +117,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lorenzobalzani.github.io/portfolio/"
+                />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/series/"
                 />
   </url>
 </urlset>
