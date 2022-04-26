@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Lorenzo Balzani&#39;s personal website</title>
+    <link>https://lorenzobalzani.github.io/it/italian/post/</link>
+    <description>Recent content in Posts on Lorenzo Balzani&#39;s personal website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/it/italian/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduzione</title>
+      <link>https://lorenzobalzani.github.io/it/italian/post/introduzione/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/it/italian/post/introduzione/</guid>
+      
+        <description>Due parole sui motivi dell&#39;esistenza di questo blog.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
