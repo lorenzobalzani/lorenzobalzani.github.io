@@ -31,6 +31,9 @@
     <loc>https://lorenzobalzani.github.io/post/introduction/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://lorenzobalzani.github.io/tags/introduction/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lorenzobalzani.github.io/tags/me/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -44,6 +47,9 @@
                 href="https://lorenzobalzani.github.io/tags/me/"
                 />
   </url><url>
+    <loc>https://lorenzobalzani.github.io/tags/motivations/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lorenzobalzani.github.io/post/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -55,19 +61,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lorenzobalzani.github.io/post/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/resume/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/resume/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/resume/"
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/</loc>

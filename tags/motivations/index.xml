@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>motivations on Lorenzo Balzani</title>
+    <link>https://lorenzobalzani.github.io/tags/motivations/</link>
+    <description>Recent content in motivations on Lorenzo Balzani</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/tags/motivations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://lorenzobalzani.github.io/post/introduction/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/introduction/</guid>
+      
+        <description>Two words to explain the motivations under the creation of this blog.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
