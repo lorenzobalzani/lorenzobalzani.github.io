@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Lorenzo Balzani</title>
+    <link>https://lorenzobalzani.github.io/it/series/</link>
+    <description>Recent content in Series on Lorenzo Balzani</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/it/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>series-setup</title>
+      <link>https://lorenzobalzani.github.io/it/series/series-setup/</link>
+      <pubDate>Sun, 15 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/it/series/series-setup/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Themes Guide</title>
+      <link>https://lorenzobalzani.github.io/it/series/themes-guide/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/it/series/themes-guide/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
