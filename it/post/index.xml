@@ -6,15 +6,26 @@
     <description>Recent content in Posts on Lorenzo Balzani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/it/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/it/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introduzione</title>
-      <link>https://lorenzobalzani.github.io/it/post/introduzione/</link>
+      <title>Che cos&#39;è il bias in statistica? [TO BE TRANSLATED]</title>
+      <link>https://lorenzobalzani.github.io/it/post/statistical_bias/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/it/post/statistical_bias/</guid>
+      
+        <description>Statistical bias.</description>
+      
+    </item>
+    
+    <item>
+      <title>Introduzione [TO BE TRANSLATED]</title>
+      <link>https://lorenzobalzani.github.io/it/post/introduction/</link>
       <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://lorenzobalzani.github.io/it/post/introduzione/</guid>
+      <guid>https://lorenzobalzani.github.io/it/post/introduction/</guid>
       
-        <description>Due parole sui motivi dell&#39;esistenza di questo blog.</description>
+        <description>Two words to explain the motivations under the creation of this blog.</description>
       
     </item>
     

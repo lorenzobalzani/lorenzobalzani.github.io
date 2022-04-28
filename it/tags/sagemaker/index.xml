@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sagemaker on Lorenzo Balzani</title>
+    <link>https://lorenzobalzani.github.io/it/tags/sagemaker/</link>
+    <description>Recent content in sagemaker on Lorenzo Balzani</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/it/tags/sagemaker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Che cos&#39;è il bias in statistica? [TO BE TRANSLATED]</title>
+      <link>https://lorenzobalzani.github.io/it/post/statistical_bias/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/it/post/statistical_bias/</guid>
+      
+        <description>Statistical bias.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
