@@ -444,15 +444,15 @@ In this kind of dataset, there are more heavily weighted (or represented) instan
 <p>Statistical bias could be caused by multiple reasons:</p>
 <ul>
 <li>activity bias, when dealing with data extracted from social media content;</li>
-<li>societal bias, when dealing with human-generated content. It&rsquo;s a superset of the above because it could not be generated only by social media content but also in other ways. All this is due to pre-concepts and notions already present in society.</li>
-<li>selection bias, when dealing with a ML system that improve itself by asking human feedbacks, which are used to improve the model performance. For instance: the streaming service recommendation system is constantly improved by users.</li>
+<li>societal bias, when dealing with human-generated content. It&rsquo;s a superset of the above because it could not be generated only by social media content but also in other ways. All this is due to pre-concepts and notions already present in society;</li>
+<li>selection bias, when dealing with a ML system that improve itself by asking human feedbacks, which are used to improve the model performance. For instance: the streaming service recommendation system is constantly improved by users;</li>
 <li>data drift, which I will better explain in a different post.</li>
 </ul>
 <h1 id="measuring-statistical-bias">Measuring statistical bias</h1>
 <p>Which metrics could you use to measure statistical bias? Well, you may take advantage of the following ones:</p>
 <ul>
 <li>Class imbalance (CI): for instance, let&rsquo;s consider a product reviews dataset. CI answers the question &ldquo;does a product category have disproportionately more instances than others?&quot;;</li>
-<li>Difference in Proportions of Labels (DPL): measures the imbalance of positive outcomes between different facet values. In the same example as before, it answers the question &ldquo;does a product category has disproportionately higher ratings than others?&quot;;</li>
+<li>Difference in Proportions of Labels (DPL): measures the imbalance of positive outcomes between different facet values. In the same example as before, it answers the question <em>&ldquo;does a product category has disproportionately higher ratings than others?&quot;</em>.</li>
 </ul>
 <h1 id="tools">Tools</h1>
 <p>Data bias could be detected with many different tools but since I use <strong>AWS</strong> I&rsquo;ll take advantage of <strong>SageMaker</strong> sub-tools.</p>
