@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Lorenzo Balzani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 26 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is statistical bias?</title>
+      <link>https://lorenzobalzani.github.io/post/statistical_bias/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/statistical_bias/</guid>
+      
+        <description>Statistical bias.</description>
+      
+    </item>
+    
     <item>
       <title>Introduction</title>
       <link>https://lorenzobalzani.github.io/post/introduction/</link>
