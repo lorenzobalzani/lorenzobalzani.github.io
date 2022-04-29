@@ -41,6 +41,19 @@
                 href="https://lorenzobalzani.github.io/it/post/statistical_bias/"
                 />
   </url><url>
+    <loc>https://lorenzobalzani.github.io/it/series/data-science-on-aws/</loc>
+    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/series/data-science-on-aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/series/data-science-on-aws/"
+                />
+  </url><url>
     <loc>https://lorenzobalzani.github.io/it/post/</loc>
     <lastmod>2022-04-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -65,6 +78,19 @@
                 rel="alternate"
                 hreflang="it"
                 href="https://lorenzobalzani.github.io/it/tags/sagemaker/"
+                />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/it/series/</loc>
+    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/series/"
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/it/tags/statistical-bias/</loc>
@@ -180,30 +206,6 @@
                 rel="alternate"
                 hreflang="it"
                 href="https://lorenzobalzani.github.io/it/tags/index/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/portfolio/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/portfolio/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/portfolio/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/series/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/series/"
                 />
   </url>
 </urlset>
