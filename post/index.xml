@@ -6,13 +6,24 @@
     <description>Recent content in Posts on Lorenzo Balzani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What is statistical bias?</title>
-      <link>https://lorenzobalzani.github.io/post/statistical_bias/</link>
+      <title>Chapter #2: feature importance with SHAP</title>
+      <link>https://lorenzobalzani.github.io/post/aws_series/feature_importance/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/aws_series/feature_importance/</guid>
+      
+        <description>Feature importance with SHAP.</description>
+      
+    </item>
+    
+    <item>
+      <title>Chapter #1: what&#39;s is statistical bias?</title>
+      <link>https://lorenzobalzani.github.io/post/aws_series/statistical_bias/</link>
       <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://lorenzobalzani.github.io/post/statistical_bias/</guid>
+      <guid>https://lorenzobalzani.github.io/post/aws_series/statistical_bias/</guid>
       
         <description>Statistical bias.</description>
       
