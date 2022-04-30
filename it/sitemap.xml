@@ -2,40 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lorenzobalzani.github.io/it/italian/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/tags/aws/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/aws/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/aws/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/italian/post/statistical_bias/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/series/data-science-on-aws/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/series/data-science-on-aws/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/series/data-science-on-aws/"
-                />
-  </url><url>
     <loc>https://lorenzobalzani.github.io/it/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -47,69 +15,18 @@
                 href="https://lorenzobalzani.github.io/it/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/it/italian/post/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/tags/sagemaker/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/sagemaker/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/sagemaker/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/series/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/series/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/tags/statistical-bias/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/statistical-bias/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/statistical-bias/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/tags/</loc>
-    <lastmod>2022-04-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/tags/"
-                />
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/english/</loc>
+    <loc>https://lorenzobalzani.github.io/it/contact/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/english/contact/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://lorenzobalzani.github.io/it/italian/contact/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/contact/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/it/tags/introduction/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
@@ -124,8 +41,18 @@
                 href="https://lorenzobalzani.github.io/it/tags/introduction/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/it/italian/post/introduction/</loc>
+    <loc>https://lorenzobalzani.github.io/it/post/introduction/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/introduction/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/it/tags/me/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
@@ -153,6 +80,32 @@
                 href="https://lorenzobalzani.github.io/it/tags/motivations/"
                 />
   </url><url>
+    <loc>https://lorenzobalzani.github.io/it/post/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/"
+                />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/it/tags/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/"
+                />
+  </url><url>
     <loc>https://lorenzobalzani.github.io/it/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -175,6 +128,18 @@
                 rel="alternate"
                 hreflang="it"
                 href="https://lorenzobalzani.github.io/it/tags/index/"
+                />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/it/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/series/"
                 />
   </url>
 </urlset>

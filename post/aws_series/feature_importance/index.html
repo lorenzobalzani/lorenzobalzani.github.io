@@ -196,7 +196,7 @@
 
     ,
         "url" : "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/feature_importance\/",
-        "wordCount" : "437",
+        "wordCount" : "439",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -453,7 +453,7 @@
 <p>Feature importance is based on a very popular open-source framework called SHAP (i.e. <strong>SH</strong>apley <strong>A</strong>dditive Ex<strong>P</strong>lanations).
 The framework itself is based on Shapley values: a topic at the core of the game theory.</p>
 <h3 id="how-does-shap-work">How does SHAP work?</h3>
-<p>To understand how SHAP works, consider a game. Multiple players are involved and there is a very specific outcome to the play, that could be either a win or a loss. Shapley values allow you to attribute the outcome of the game to the individual players involved in the game.</p>
+<p>To understand how SHAP works, consider a game. Multiple players are involved and there is a very specific outcome to the play, that could be either a win or a loss. Shapley values allow you to attribute the outcome of the game to the individual players involved in it.</p>
 <h3 id="but-how-this-could-be-translated-into-the-ml-world">But how this could be translated into the ML world?</h3>
 <p>In <em>our</em> case, the individual players would be the individual features that make up the data set, and the outcome of the play would be the model prediction. Therefore, it can be possible to explain how the predictions will correlate to the individual feature values.</p>
 <p>Using the SHAP framework, you can provide both local and global explanations. In details:</p>
@@ -462,7 +462,7 @@ The framework itself is based on Shapley values: a topic at the core of the game
 <li>the global explanation takes a much more comprehensive view in trying to understand how the data in its entirety (i.e. all features) contributes to the outcome.</li>
 </ul>
 <p>SHAP framework is also very extensive, since it considers all possible combinations of feature values along with all possible outcomes. Due to this extensive nature, the SHAP framework could be very time-intensive, but also SHAP can provide you with guarantees in terms of consistency and local accuracy.</p>
-<p>In the next post, I&rsquo;ll go through a hands-on tutorial on how compute these feature importance scores. See you there!</p>
+<p>In the next post, I&rsquo;ll go through a hands-on tutorial on how compute these feature importance scores on <strong>AWS SageMaker</strong>. See you there!</p>
 
 
 
