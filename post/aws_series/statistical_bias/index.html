@@ -126,7 +126,7 @@
 <meta property="og:url" content="https://lorenzobalzani.github.io/post/aws_series/statistical_bias/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-04-28T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
-<meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance/" />
+<meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance_on_aws/" /><meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance/" />
 
 
 
@@ -196,7 +196,7 @@
 
     ,
         "url" : "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/statistical_bias\/",
-        "wordCount" : "1295",
+        "wordCount" : "1316",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -435,7 +435,7 @@
         </ul>
 
       <h1 id="hello-there-">Hello there! 👋</h1>
-<p>As promised, I&rsquo;ll begin this new series of posts with a fundamental sub-process of the <strong>EDA</strong> (i.e. Explanatory Data Analysis) that every aspiring Data Scientist has to face: deal with statistical bias.
+<p>As promised, I&rsquo;ll begin this brand new series of posts with a fundamental sub-process of the <strong>EDA</strong> (i.e. Explanatory Data Analysis) that every aspiring Data Scientist has to face: deal with statistical bias.
 First of all, we define a dataset as biased when it <strong>cannot</strong> comprehensively, completely, and accurately represent the underlying problem space.
 In this kind of dataset, there are more heavily weighted (or represented) instances. This leads to an unbalanced dataset and in the end, it&rsquo;s more probable to handle with a biased model (believe me, it&rsquo;s not a great deal 🤕). For example, in a fraud detection problem, fraud occurrences (i.e. positive cases) are likely to be rare and therefore they are not as represented as we wish.</p>
 <h1 id="causes">Causes</h1>
@@ -456,7 +456,7 @@ In this kind of dataset, there are more heavily weighted (or represented) instan
 <p>Data bias could be detected with many different tools but since I use <strong>AWS</strong> I&rsquo;ll take advantage of <strong>SageMaker</strong> sub-tools.</p>
 <h2 id="sagemaker-data-wrangler">SageMaker Data Wrangler</h2>
 <p>First, I will introduce Data Wrangler. Data Wrangler provides you with capabilities to connect to different data sources. You can then visualize, apply any number of transformations and detected for your data, visualize the data, and transform the data, by applying any number of transformations, detected statistical bias in your data sets, and generate reports about it. Although it can be used for feature importance as well, in this post I&rsquo;ll mainly put my focus on statistical bias detection and generated reports on the training set.</p>
-<figure class="medium"><img src="/images/amazon_sagemaker_data_wrangler.png"
+<figure class="medium"><img src="/images/1_statistical_bias/amazon_sagemaker_data_wrangler.png"
          alt="image"/><figcaption>
             <p>SageMaker Data Wrangler capabilities</p>
         </figcaption>
@@ -465,7 +465,7 @@ In this kind of dataset, there are more heavily weighted (or represented) instan
 <h2 id="sagemaker-clarify">Sagemaker Clarify</h2>
 <p>The second tool is Amazon SageMaker Clarify, a tool to perform statistical bias detection on your datasets. SageMaker Clarify can perform statistical bias detection and generate bias reports on your training datasets. Additionally, it can also perform bias detection in trained and deployed models. It further provides capabilities for machine learning explainability, as well as detecting drift in data and models.
 For now, I&rsquo;m going to focus on the statistical bias detection and report generation capabilities of Clarify.</p>
-<figure class="medium"><img src="/images/amazon_sagemaker_data_clarify.png"
+<figure class="medium"><img src="/images/1_statistical_bias/amazon_sagemaker_data_clarify.png"
          alt="image"/><figcaption>
             <p>SageMaker Data Clarify capabilities</p>
         </figcaption>
@@ -514,7 +514,7 @@ To achieve this, let&rsquo;s import the Clarify library from the SageMaker SDK. 
 <h4 id="explanation-3">Explanation</h4>
 <p>Once you have configured those three objects, you are ready to run the pre-training bias method on the Clarify processor. In addition to specifying the data config and the data bias config that you already configured, you can also specify the methods that you want to evaluate for bias. So, these methods are the metrics that you&rsquo;ve already learned about to detect bias. The metrics here are the CI (i.e. the class imbalance), and the DPL (i.e. Difference in Proportions of Labels ). You can specify a few other methods here as well. The wait parameter specifies whether this bias detection job should block the rest of your code or should be executed in the background. Similarly, the logs parameter specifies whether you want to capture the logs or not. Once the configuration of the pre-training bias method is done, you launch this job.</p>
 <h2 id="in-the-background">In the background</h2>
-<figure class="medium"><img src="/images/sagemaker_processing.png"
+<figure class="medium"><img src="/images/1_statistical_bias/sagemaker_processing.png"
          alt="image"/><figcaption>
             <p>SageMaker Processing</p>
         </figcaption>
@@ -563,6 +563,8 @@ Once the processing cluster has processed the data, the transformed data is put 
   </div>
 </div>
 
+<h2 id="additional-material">Additional material</h2>
+<p>If you&rsquo;d like to gain more information about measuring pretraing bias let&rsquo;s have a look at <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-measure-data-bias.html">AWS documentation</a>.</p>
 <p>So, that&rsquo;s it for this post. I will write another short one as a tutorial on how to practically use <strong>SageMaker Clarify</strong>.</p>
 
 
@@ -570,6 +572,9 @@ Once the processing cluster has processed the data, the transformed data is put 
 
 <h3>Posts in this Series</h3>
 <ul>
+  
+    <li><a href="/post/aws_series/feature_importance_on_aws/">Chapter #3: Feature Importance on SageMaker Data Wrangler</a></li>
+
   
     <li><a href="/post/aws_series/feature_importance/">Chapter #2: Feature Importance With SHAP</a></li>
 

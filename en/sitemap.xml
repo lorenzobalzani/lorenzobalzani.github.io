@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lorenzobalzani.github.io/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -16,19 +16,22 @@
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/aws/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://lorenzobalzani.github.io/post/aws_series/feature_importance/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <loc>https://lorenzobalzani.github.io/post/aws_series/feature_importance_on_aws/</loc>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/tags/data-wrangler/</loc>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lorenzobalzani.github.io/series/data-science-on-aws/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/feature-importance/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -41,10 +44,10 @@
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/sagemaker/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lorenzobalzani.github.io/series/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -56,11 +59,8 @@
                 href="https://lorenzobalzani.github.io/series/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/tags/shap/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://lorenzobalzani.github.io/tags/</loc>
-    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="it"
@@ -71,6 +71,12 @@
                 hreflang="en"
                 href="https://lorenzobalzani.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/post/aws_series/feature_importance/</loc>
+    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/tags/shap/</loc>
+    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/aws_series/statistical_bias/</loc>
     <lastmod>2022-04-28T00:00:00+00:00</lastmod>

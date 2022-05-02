@@ -8,7 +8,7 @@
   <title>
     
       
-        Chapter #2: feature importance with SHAP |
+        Chapter #3: feature importance on SageMaker Data Wrangler |
 
       
       Lorenzo Balzani
@@ -23,7 +23,7 @@
   <meta
     name="description"
     content="
-      Feature importance with SHAP.
+      Feature importance on AWS. We&#39;ll SageMaker Data Wrangler.
 
 
     "
@@ -82,7 +82,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://lorenzobalzani.github.io/post/aws_series/feature_importance/" />
+  <link rel="canonical" href="https://lorenzobalzani.github.io/post/aws_series/feature_importance_on_aws/" />
 
   
   
@@ -114,19 +114,19 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/>
 
-<meta name="twitter:title" content="Chapter #2: feature importance with SHAP"/>
-<meta name="twitter:description" content="Feature importance with SHAP."/>
+<meta name="twitter:title" content="Chapter #3: feature importance on SageMaker Data Wrangler"/>
+<meta name="twitter:description" content="Feature importance on AWS. We&#39;ll SageMaker Data Wrangler."/>
 
 
 
   
-  <meta property="og:title" content="Chapter #2: feature importance with SHAP" />
-<meta property="og:description" content="Feature importance with SHAP." />
+  <meta property="og:title" content="Chapter #3: feature importance on SageMaker Data Wrangler" />
+<meta property="og:description" content="Feature importance on AWS. We&#39;ll SageMaker Data Wrangler." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-04-29T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-04-29T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
-<meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance_on_aws/" /><meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/statistical_bias/" />
+<meta property="og:url" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance_on_aws/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-02T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
+<meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance/" /><meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/statistical_bias/" />
 
 
 
@@ -140,11 +140,11 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "post",
-        "name": "Chapter #2: feature importance with SHAP",
-        "headline": "Chapter #2: feature importance with SHAP",
+        "name": "Chapter #3: feature importance on SageMaker Data Wrangler",
+        "headline": "Chapter #3: feature importance on SageMaker Data Wrangler",
         "alternativeHeadline": "",
         "description": "
-      Feature importance with SHAP.
+      Feature importance on AWS. We\u0027ll SageMaker Data Wrangler.
 
 
     ",
@@ -152,7 +152,7 @@
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/feature_importance\/"
+            "@id": "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/feature_importance_on_aws\/"
         },
         "author" : {
             "@type": "Person",
@@ -171,9 +171,9 @@
             "name": "Lorenzo Balzani"
         },
         "copyrightYear" : "2022",
-        "dateCreated": "2022-04-29T00:00:00.00Z",
-        "datePublished": "2022-04-29T00:00:00.00Z",
-        "dateModified": "2022-04-29T00:00:00.00Z",
+        "dateCreated": "2022-05-02T00:00:00.00Z",
+        "datePublished": "2022-05-02T00:00:00.00Z",
+        "dateModified": "2022-05-02T00:00:00.00Z",
         "publisher":{
             "@type":"Organization",
             "name": "Lorenzo Balzani",
@@ -195,19 +195,12 @@
       ]
 
     ,
-        "url" : "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/feature_importance\/",
-        "wordCount" : "454",
+        "url" : "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/feature_importance_on_aws\/",
+        "wordCount" : "970",
         "genre" : [ ],
         "keywords" : [ 
       
       "feature importance"
-
-    
-      
-        ,
-
-      
-      "SHAP"
 
     
       
@@ -222,6 +215,13 @@
 
       
       "sagemaker"
+
+    
+      
+        ,
+
+      
+      "data wrangler"
 
     ]
     }
@@ -422,14 +422,14 @@
   >
     
     <div class="post__content">
-      <h1>Chapter #2: Feature Importance With SHAP</h1>
+      <h1>Chapter #3: Feature Importance on SageMaker Data Wrangler</h1>
       
         <ul class="post__meta">
           <li class="post__meta-item">
             <em class="fas fa-calendar-day post__meta-icon"></em>
             <span class="post__meta-text"
               >
-                4/29/2022
+                5/2/2022
 
 
               
@@ -437,34 +437,82 @@
           </li>
           <li class="post__meta-item">
             <em class="fas fa-stopwatch post__meta-icon"></em>
-            <span class="post__meta-text">3-minute read</span>
+            <span class="post__meta-text">5-minute read</span>
           </li>
         </ul>
 
-      <h1 id="hi-folks-">Hi folks! 👋</h1>
-<p>In the previous post I talked about <strong>EDA</strong> and in particular <strong>statistical bias</strong>. Now it&rsquo;s the turn of <strong>feature importance</strong>.</p>
-<h1 id="whats-feature-importance">What&rsquo;s feature importance?</h1>
-<p>Feature importance is the idea of explaining the individual features that make up a training data set, using a score called <em>important score</em>.</p>
-<h2 id="example">Example</h2>
-<p>Let&rsquo;s take, for example, the product review data set. It consists of multiple different features, and I am trying to build a product sentiment prediction model out of that data set. I would be interested in understanding what features will play a role in that final model; that is where feature importance comes into the picture.</p>
-<h2 id="why-should-i-consider-it">Why should I consider it?</h2>
-<p>Some features from my data set could be more relevant to the final model than others. Using feature importance, I can rank the individual features in the order of their importance and contribution to the final model. Feature importance allows me to evaluate how useful or valuable a feature is, concerning the other features that exist in the same data set.</p>
-<h2 id="shap-framework">SHAP framework</h2>
-<p>Feature importance is based on a very popular open-source framework called SHAP (i.e. <strong>SH</strong>apley <strong>A</strong>dditive Ex<strong>P</strong>lanations).
-The framework itself is based on Shapley values: a topic at the core of the game theory.</p>
-<h3 id="how-does-shap-work">How does SHAP work?</h3>
-<p>To understand how SHAP works, consider a game. Multiple players are involved and there is a very specific outcome to the play, that could be either a win or a loss. Shapley values allow me to attribute the outcome of the game to the individual players involved in it.</p>
-<h3 id="but-how-this-could-be-translated-into-the-ml-world">But how this could be translated into the ML world?</h3>
-<p>In <em>our</em> case, the individual players would be the individual features that make up the data set, and the outcome of the play would be the model prediction. Therefore, it can be possible to explain how the predictions will correlate to the individual feature values.</p>
-<p>Using the SHAP framework, I can provide both local and global explanations. In details:</p>
-<ul>
-<li>local explanation focuses on indicating how an individual feature contributes to the final model;</li>
-<li>the global explanation takes a much more comprehensive view in trying to understand how the data in its entirety (i.e. all features) contributes to the outcome.</li>
-</ul>
-<p>SHAP framework is also very extensive, since it considers all possible combinations of feature values along with all possible outcomes. Due to this extensive nature, the SHAP framework could be very time-intensive, but also SHAP can provide me with guarantees in terms of consistency and local accuracy.</p>
-<h2 id="additional-material">Additional material</h2>
-<p>If you&rsquo;d like to gain more information about SHAP navigate to <a href="https://shap.readthedocs.io/en/latest/">this link</a>.</p>
-<p>In the next post, I&rsquo;ll go through a hands-on tutorial on how compute these feature importance scores on <strong>AWS SageMaker</strong>. See you there!</p>
+      <p>Hi folks! 👋</p>
+<p>In this post, I will explain to you how to use Data Wrangler to calculate feature importance on your data set. To get started, I choose to start a new data flow from the Amazon SageMaker Studio homepage.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/0.png"
+         alt="image"/><figcaption>
+            <p>New data flow</p>
+        </figcaption>
+</figure>
+
+<p>Here I have a chance to get connected to data from multiple sources, such as Amazon S3 and Amazon Athena. For my case, I have all of my data in S3, so let me go ahead and navigate to S3.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/1.png"
+         alt="image"/><figcaption>
+            <p>Source type selection</p>
+        </figcaption>
+</figure>
+
+<p>Now I have to find the right bucket and look at the data that I want to calculate the feature importance.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/2.png"
+         alt="image"/><figcaption>
+            <p>S3 bucket selection</p>
+        </figcaption>
+</figure>
+
+<p>I&rsquo;m going to use my raw data set of the product reviews (saved as a CSV file), to calculate the feature importance. When I select the right CSV, I get a little preview of the features that are included in that CSV file.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/3.png"
+         alt="image"/><figcaption>
+            <p>CSV selection</p>
+        </figcaption>
+</figure>
+
+<p>Once I took a quick review of the fields that are included here and I&rsquo;m enough satisfied with this data, I can just simply import the data set.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/4.png"
+         alt="image"/><figcaption>
+            <p>Import dataset</p>
+        </figcaption>
+</figure>
+
+<p>That action will bring the data from the S3 bucket into the Data Wrangler environment. And once that data is imported, if I click on this plus sign here, I will see that there are different operations that I can take to act on the data. For this blog&rsquo;s purposes, I&rsquo;m going to add analysis to that data.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/5.png"
+         alt="image"/><figcaption>
+            <p>Data analysis</p>
+        </figcaption>
+</figure>
+
+<p>When I arrive at this page, I will select what type of analysis I want to do. Here I&rsquo;ll see that I have an option of doing multiple types of analysis. I will select the Quick Model because that&rsquo;s going to give me the feature importance calculation on the data set and I will name my analysis as <em>FI</em>. And I will set the label that I want to indicate in my data set. Because I&rsquo;m using the raw data set here, I don&rsquo;t have the sentiment feature yet in this data set, but I&rsquo;ll see that the sentiment column is derived from star rating. So, I will use the star rating as the label for this analysis. Once I do this quick configuration here, I can do a preview of what the analysis will look like.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/6.png"
+         alt="image"/><figcaption>
+            <p>Analysis tipe</p>
+        </figcaption>
+</figure>
+
+<p>When I hit that preview, Data Wrangler is working in the background to create a quick model out of a subset of my data. It uses 70% of the subset of the data for training and 30% for test. It will build that quick model to analyze the F1 score of that quick model. Here, Data Wrangler has calculated the feature importance score on my data set. Behind the scene, Data Wrangler ran a Random Cut Forest algorithm on the subset of my data, using 70% for training and 30% for testing. And it has calculated a quick model to give me the feature importance scores, as well as the F1 score. So, I can see the F1 score on the quick model that was built on the data. Now, let&rsquo;s look at what&rsquo;s included in this feature importance scores here.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/7.png"
+         alt="image"/><figcaption>
+            <p>Data analysis preview</p>
+        </figcaption>
+</figure>
+
+<p>So here I can see that three of the features in the data set are contributing to the final model, as indicated by the importance score. The highest-ranking one is the recommended indicator, recall that this is the feature that indicates whether the reviewer is recommending this particular product to others or not. This intuitively makes sense: if a particular reviewer is recommending the product to others, then we can intuitively say that the star rating for that product is going to be higher. Similarly, I can see that the review text and the review title are also contributing to the final model. That also makes sense: if I have a review like <em>&ldquo;This product is really good, I really enjoy it.&quot;</em> vs <em>&ldquo;This product is not good at all, I&rsquo;m sorry I wasted my time on this.&quot;</em> I can see how that review text can affect the star ratings of the product. On the other hand, if I look at the right-hand side of this corner, I will find some columns, the class name, the division name, and so on, that are not contributing to the final model at all. Now, what&rsquo;s surprising here to me is this positive feedback count. I would think the positive feedback count will contribute to my final model when it&rsquo;s trying to credit the star rating of a product, but this is just a starting point here. So, after I saw this feature importance, maybe I have an opportunity to go back and fix the data set and perform more feature engineering tasks, like dropping some of the non-contributing columns, hence I can reduce the dimensions of the training data set.  There is also an opportunity to combine fields, maybe combining the positive feedback count and the recommended indicator, to arrive at a new feature that could improve the F1 score or the final model itself. So, based on what the feature importance score is showing me, U can go back and do more feature engineering tasks on my data set. Now that I have had a chance to look through the F1 scores and did a little bit of analysis, I will go ahead and create the entire analysis here.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/8.png"
+         alt="image"/><figcaption>
+            <p>Create persistent data analysis</p>
+        </figcaption>
+</figure>
+
+<p>And the reason for creating this new analysis here is that the next time I want to look at the data and F1 scores, I don&rsquo;t have to start from scratch. I can simply use this persistent analysis and get back to this screen right here.</p>
+<figure class="medium"><img src="/images/3_data_wrangler/9.png"
+         alt="image"/><figcaption>
+            <p>Access previous analysis</p>
+        </figcaption>
+</figure>
+
+<p>So, that&rsquo;s it for this post. In the next ones, I&rsquo;ll go through AutoML and some other cool stuff 😎</p>
 
 
 
@@ -487,7 +535,7 @@ The framework itself is based on Shapley values: a topic at the core of the game
       
 
       
-        <span><a class="tag" href="/tags/feature-importance/">feature importance</a><a class="tag" href="/tags/shap/">SHAP</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/sagemaker/">sagemaker</a></span>
+        <span><a class="tag" href="/tags/feature-importance/">feature importance</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/sagemaker/">sagemaker</a><a class="tag" href="/tags/data-wrangler/">data wrangler</a></span>
 
 
 

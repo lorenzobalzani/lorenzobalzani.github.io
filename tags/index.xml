@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Lorenzo Balzani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>aws</title>
       <link>https://lorenzobalzani.github.io/tags/aws/</link>
-      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lorenzobalzani.github.io/tags/aws/</guid>
       
@@ -19,9 +19,20 @@
     </item>
     
     <item>
+      <title>data wrangler</title>
+      <link>https://lorenzobalzani.github.io/tags/data-wrangler/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/tags/data-wrangler/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>feature importance</title>
       <link>https://lorenzobalzani.github.io/tags/feature-importance/</link>
-      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lorenzobalzani.github.io/tags/feature-importance/</guid>
       
@@ -32,7 +43,7 @@
     <item>
       <title>sagemaker</title>
       <link>https://lorenzobalzani.github.io/tags/sagemaker/</link>
-      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lorenzobalzani.github.io/tags/sagemaker/</guid>
       
