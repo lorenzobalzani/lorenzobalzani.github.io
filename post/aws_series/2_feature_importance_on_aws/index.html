@@ -15,7 +15,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.101.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Lorenzo Balzani" />
   <meta
     name="description"
@@ -91,8 +91,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
-    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -101,8 +101,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
-      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      src="/js/anatole-theme-switcher.min.738c0e3a493854876aeab9e2316fd43f1936aeeac4cc6b3e60bb26456dba72ad.js"
+      integrity="sha256-c4wOOkk4VIdq6rniMW/UPxk2rurEzGs&#43;YLsmRW26cq0="
       crossorigin="anonymous"
     ></script>
 
@@ -325,8 +325,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
     crossorigin="anonymous"
   ></script></div>
 </aside>
@@ -520,7 +520,7 @@
         </figcaption>
 </figure>
 
-<p>So here I can see that three of the features in the data set are contributing to the final model, as indicated by the importance score. The highest-ranking one is the recommended indicator, recall that this is the feature that indicates whether the reviewer is recommending this particular product to others or not. This intuitively makes sense: if a particular reviewer is recommending the product to others, then we can intuitively say that the star rating for that product is going to be higher. Similarly, I can see that the review text and the review title are also contributing to the final model. That also makes sense: if I have a review like <em>&ldquo;This product is really good, I really enjoy it.&quot;</em> vs <em>&ldquo;This product is not good at all, I&rsquo;m sorry I wasted my time on this.&quot;</em> I can see how that review text can affect the star ratings of the product. On the other hand, if I look at the right-hand side of this corner, I will find some columns, the class name, the division name, and so on, that are not contributing to the final model at all. Now, what&rsquo;s surprising here to me is this positive feedback count. I would think the positive feedback count will contribute to my final model when it&rsquo;s trying to credit the star rating of a product, but this is just a starting point here. So, after I saw this feature importance, maybe I have an opportunity to go back and fix the data set and perform more feature engineering tasks, like dropping some of the non-contributing columns, hence I can reduce the dimensions of the training data set.  There is also an opportunity to combine fields, maybe combining the positive feedback count and the recommended indicator, to arrive at a new feature that could improve the F1 score or the final model itself. So, based on what the feature importance score is showing me, U can go back and do more feature engineering tasks on my data set. Now that I have had a chance to look through the F1 scores and did a little bit of analysis, I will go ahead and create the entire analysis here.</p>
+<p>So here I can see that three of the features in the data set are contributing to the final model, as indicated by the importance score. The highest-ranking one is the recommended indicator, recall that this is the feature that indicates whether the reviewer is recommending this particular product to others or not. This intuitively makes sense: if a particular reviewer is recommending the product to others, then we can intuitively say that the star rating for that product is going to be higher. Similarly, I can see that the review text and the review title are also contributing to the final model. That also makes sense: if I have a review like <em>&ldquo;This product is really good, I really enjoy it.&rdquo;</em> vs <em>&ldquo;This product is not good at all, I&rsquo;m sorry I wasted my time on this.&rdquo;</em> I can see how that review text can affect the star ratings of the product. On the other hand, if I look at the right-hand side of this corner, I will find some columns, the class name, the division name, and so on, that are not contributing to the final model at all. Now, what&rsquo;s surprising here to me is this positive feedback count. I would think the positive feedback count will contribute to my final model when it&rsquo;s trying to credit the star rating of a product, but this is just a starting point here. So, after I saw this feature importance, maybe I have an opportunity to go back and fix the data set and perform more feature engineering tasks, like dropping some of the non-contributing columns, hence I can reduce the dimensions of the training data set.  There is also an opportunity to combine fields, maybe combining the positive feedback count and the recommended indicator, to arrive at a new feature that could improve the F1 score or the final model itself. So, based on what the feature importance score is showing me, U can go back and do more feature engineering tasks on my data set. Now that I have had a chance to look through the F1 scores and did a little bit of analysis, I will go ahead and create the entire analysis here.</p>
 <figure class="medium"><img src="/images/3_data_wrangler/8.png"
          alt="image"/><figcaption>
             <p>Create persistent data analysis</p>
@@ -569,7 +569,7 @@
           <h2>comments</h2>
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -609,8 +609,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.602bd2014468bd348112e2aa24f595c530d257a4ed6c335d7baaa6ac9a7ca6fb.js"
+    integrity="sha256-YCvSAURovTSBEuKqJPWVxTDSV6TtbDNde6qmrJp8pvs="
     crossorigin="anonymous"
   ></script></body>
 </html>
