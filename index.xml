@@ -6,7 +6,18 @@
     <description>Recent content on Lorenzo Balzani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PyTorch implementation of the self-attention mechanism</title>
+      <link>https://lorenzobalzani.github.io/post/self_attention/self_attention/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/self_attention/self_attention/</guid>
+      
+        <description>Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &#34;Attention Is All You Need&#34;.</description>
+      
+    </item>
+    
     <item>
       <title>Chapter #3: feature importance on SageMaker Data Wrangler</title>
       <link>https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/</link>
