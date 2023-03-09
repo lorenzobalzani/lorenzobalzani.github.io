@@ -187,6 +187,10 @@
                 href="https://lorenzobalzani.github.io/tags/motivations/"
                 />
   </url><url>
+    <loc>https://lorenzobalzani.github.io/post/self_attention/self_attention/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://lorenzobalzani.github.io/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
