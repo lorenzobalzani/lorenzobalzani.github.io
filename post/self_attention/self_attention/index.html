@@ -195,7 +195,7 @@
 
     ,
         "url" : "https:\/\/lorenzobalzani.github.io\/post\/self_attention\/self_attention\/",
-        "wordCount" : "3027",
+        "wordCount" : "3055",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -445,7 +445,12 @@ In real-world scenarios, there would be a bigger vocubalary, e.g. hundred of tho
 Numeric representation of the input sentence = tensor([6, 4, 7, 1, 0, 2, 4, 6])
 </code></pre>
 <h1 id="single-head-self-attention">Single head self-attention</h1>
-<p><img src="./images/single-head.png" alt="single-attention-head"></p>
+<figure class="medium"><img src="/images/self_attention/single-head.png"
+         alt="image"/><figcaption>
+            <p>A single self-attention head</p>
+        </figcaption>
+</figure>
+
 <p>Now create a $n_{words} \times dim_{word_{embedding}} = 8 \times 16$ embedding tensor.</p>
 <p>These initial values will be randomly generated and $dim_{vec} = 16$ is an hyper-parameter.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">n_sentence</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
@@ -584,7 +589,12 @@ Sum of this vector = 8.0
 </code></pre>
 <p>## Compute $z$ vector
 The $z$ vector is an enhanced version of the input word. In other words, it <em>&ldquo;embeds&rdquo;</em> the information about ALL the other inputs words.</p>
-<p><img src="./images/context-vector.png" alt="context-vector"></p>
+<figure class="medium"><img src="/images/self_attention/context-vector.png"
+         alt="image"/><figcaption>
+            <p>The context vector</p>
+        </figcaption>
+</figure>
+
 <p>Note that the dimension of $z = dim_v$, and in this case $dim_v &gt; dim_{word_{embedding}}$, but it turns out that can be arbitrarly chosen.</p>
 <h3 id="example-4">Example #4</h3>
 <p>Let&rsquo;s compute $z$ for the first word w.r.t. ALL other words.</p>
@@ -658,10 +668,20 @@ tensor([[ 1.0208e-08,  4.5245e-09,  8.9584e-09,  8.8031e-09,  1.0888e-08,
 </code></pre>
 <h2 id="ok-butare-you-getting-confused-by-all-these-dimension">Ok but&hellip;are you getting confused by all these dimension?</h2>
 <p>Try to check out this picture.
-<img src="./images/single-attention-head.png" alt="single-attention-head"></p>
+<figure class="medium"><img src="/images/self_attention/single-attention-head.png"
+         alt="image"/><figcaption>
+            <p>A single self-attention head</p>
+        </figcaption>
+</figure>
+</p>
 <h1 id="multi-head-self-attention">Multi-head self-attention</h1>
-<p>Each query has now shape $n_{heads} \times dim_{word_{embedding}}$.
-<img src="./images/multi-head.png" alt="multi-attention-head"></p>
+<p>Each query has now shape $n_{heads} \times dim_{word_{embedding}}$.</p>
+<figure class="medium"><img src="/images/self_attention/multi-head.png"
+         alt="image"/><figcaption>
+            <p>A multi self-attention head</p>
+        </figcaption>
+</figure>
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">n_heads</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">multihead_W_query</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span> 
 <span class="n">multihead_W_key</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_k</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
@@ -980,8 +1000,8 @@ tensor([[[ 1.2550e+01,  8.2323e+00,  9.1246e+00,  2.9574e+00,  1.3149e+01,
            1.4413e+00,  1.9314e-01,  5.0585e-01,  6.4904e-01,  1.0730e+00,
            2.4695e+00,  6.4522e-01,  1.0604e+00]]])
 </code></pre>
-<h1 id="cross-attention-todo">Cross-attention [TODO]</h1>
-<p>This mechanism is used in Transformer to perform an attention calculus among different inputs.</p>
+<h1 id="cross-attention">Cross-attention</h1>
+<p>So, that&rsquo;s it for this post. The next one will be focusing on the cross-attention, the mechanism used in Transformers to perform an attention calculus among different inputs.</p>
 </div>
     <div class="post__footer">
       
