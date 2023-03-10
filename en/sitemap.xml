@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lorenzobalzani.github.io/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -18,22 +18,27 @@
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/attention/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/deep-learning/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/post/self_attention/self_attention/</loc>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/nlp/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -47,13 +52,8 @@
                 href="https://lorenzobalzani.github.io/post/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/post/self_attention/self_attention/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://lorenzobalzani.github.io/tags/</loc>
-    <lastmod>2023-03-09T00:00:00+00:00</lastmod>
+    <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link

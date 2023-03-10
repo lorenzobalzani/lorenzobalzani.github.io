@@ -10,7 +10,7 @@
   <title>
     
       
-        PyTorch implementation of the self-attention mechanism |
+        Implement the self-attention mechanism in PyTorch |
       Lorenzo Balzani
 
   </title>
@@ -114,18 +114,18 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/>
 
-<meta name="twitter:title" content="PyTorch implementation of the self-attention mechanism"/>
+<meta name="twitter:title" content="Implement the self-attention mechanism in PyTorch"/>
 <meta name="twitter:description" content="Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &#34;Attention Is All You Need&#34;."/>
 
 
 
   
-  <meta property="og:title" content="PyTorch implementation of the self-attention mechanism" />
+  <meta property="og:title" content="Implement the self-attention mechanism in PyTorch" />
 <meta property="og:description" content="Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &#34;Attention Is All You Need&#34;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lorenzobalzani.github.io/post/self_attention/self_attention/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-03-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-03-09T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
+<meta property="article:published_time" content="2023-03-10T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-10T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
 
 
 
@@ -139,8 +139,8 @@
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "post",
-        "name": "PyTorch implementation of the self-attention mechanism",
-        "headline": "PyTorch implementation of the self-attention mechanism",
+        "name": "Implement the self-attention mechanism in PyTorch",
+        "headline": "Implement the self-attention mechanism in PyTorch",
         "alternativeHeadline": "",
         "description": "
       Python implementation of the self (scaled-dot product) attention mechanism originally proposed in \u0022Attention Is All You Need\u0022.
@@ -170,9 +170,9 @@
             "name": "Lorenzo Balzani"
         },
         "copyrightYear" : "2023",
-        "dateCreated": "2023-03-09T00:00:00.00Z",
-        "datePublished": "2023-03-09T00:00:00.00Z",
-        "dateModified": "2023-03-09T00:00:00.00Z",
+        "dateCreated": "2023-03-10T00:00:00.00Z",
+        "datePublished": "2023-03-10T00:00:00.00Z",
+        "dateModified": "2023-03-10T00:00:00.00Z",
         "publisher":{
             "@type":"Organization",
             "name": "Lorenzo Balzani",
@@ -195,7 +195,7 @@
 
     ,
         "url" : "https:\/\/lorenzobalzani.github.io\/post\/self_attention\/self_attention\/",
-        "wordCount" : "3055",
+        "wordCount" : "3064",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -305,7 +305,13 @@
     src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
     integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
     crossorigin="anonymous"
-  ></script></div>
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
 </aside>
       <main
         
@@ -405,7 +411,7 @@
   >
     
     <div class="post__content">
-      <h1>PyTorch Implementation of the Self-Attention Mechanism</h1>
+      <h1>Implement the Self-Attention Mechanism in PyTorch</h1>
       
         <ul class="post__meta">
           <li class="post__meta-item">
@@ -413,7 +419,7 @@
             <span class="post__meta-text"
               >
                 
-                  3/9/2023
+                  3/10/2023
                 
 
               
@@ -424,9 +430,8 @@
             <span class="post__meta-text">15-minute read</span>
           </li>
         </ul>
-      <h1 id="self-attention-pytorch-implementation">Self-attention PyTorch implementation</h1>
-<p>Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &ldquo;Attention Is All You Need&rdquo;.</p>
-<p>Note that this is intended to be an executable and extended version of <a href="https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html">this article</a>.</p>
+      <p>Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &ldquo;Attention Is All You Need&rdquo;. Note that this is intended to be an executable and extended version of <a href="https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html">this article</a>.</p>
+<p>Would you like to download the code? Check out this <a href="https://github.com/lorenzobalzani/nlp-dl-experiments">GitHub repository</a>.</p>
 <h1 id="setup">Setup</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
@@ -451,8 +456,8 @@ Numeric representation of the input sentence = tensor([6, 4, 7, 1, 0, 2, 4, 6])
         </figcaption>
 </figure>
 
-<p>Now create a $n_{words} \times dim_{word_{embedding}} = 8 \times 16$ embedding tensor.</p>
-<p>These initial values will be randomly generated and $dim_{vec} = 16$ is an hyper-parameter.</p>
+<p>Now create a \(n_{words} \cdot dim_{word_{embedding}} = 8 \cdot 16\) embedding tensor.</p>
+<p>These initial values will be randomly generated and \(\dim_{vec} = 16\) is an hyper-parameter.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">n_sentence</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
 <span class="n">embedded_sentence</span> <span class="o">=</span> <span class="n">embedding_layer</span><span class="p">(</span><span class="n">sentence_ints</span><span class="p">)</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Embedded sentence shape =&#39;</span><span class="p">,</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -468,7 +473,7 @@ Since Queries and Keys vector are multiplied afterward, their dimensions MUST be
 </code></pre></div><h2 id="compute-queries-keys-values-for-the-input-words">Compute queries, keys, values for the input words</h2>
 <p>First, try to understand this on single words.</p>
 <h3 id="example-1">Example #1</h3>
-<p>Compute query, key, and value vector related to the first and second words in the sentence ($idx = 0, 1$).</p>
+<p>Compute query, key, and value vector related to the first and second words in the sentence (\(idx = 0, 1\)).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">x_1</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
 <span class="n">query_1</span> <span class="o">=</span> <span class="n">W_q</span> <span class="o">@</span> <span class="n">x_1</span>
@@ -513,7 +518,7 @@ All input words -&gt; values.shape = torch.Size([8, 28])
 <h2 id="unnormalized-attention-scores">Unnormalized attention scores</h2>
 <p>As before, I am trying to understand this concept on single words.</p>
 <h3 id="example-2">Example #2</h3>
-<p>Let&rsquo;s compute the unnormalized attention score $\omega$ (omega) for the first word w.r.t. the 5th word</p>
+<p>Let&rsquo;s compute the unnormalized attention score \(\omega\) (omega) for the first word w.r.t. the 5th word</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">omega_1_5</span> <span class="o">=</span> <span class="n">queries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">keys</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unnormalized attention score of first word w.r.t. 5th word =&#39;</span><span class="p">,</span> <span class="n">omega_1_5</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
 </code></pre></div><pre><code>Unnormalized attention score of first word w.r.t. 5th word = -46.02456283569336
@@ -554,7 +559,7 @@ All input words scores -&gt; omega_all.shape = torch.Size([8, 8])
 <p>Why? To reach more numeric stability and thus, reduce errors.
 Note that the sum of the values is 1 (thanks to the softmax function).</p>
 <h3 id="example-3">Example #3</h3>
-<p>Let&rsquo;s compute the normalized attention score $\alpha$ (alpha) for the first word w.r.t. the ALL other words.</p>
+<p>Let&rsquo;s compute the normalized attention score \(\alpha\) (alpha) for the first word w.r.t. the ALL other words.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">normalized_attention_scores_1</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">omega_1_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized attention scores of first word w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">normalized_attention_scores_1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">normalized_attention_scores_1</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
@@ -564,7 +569,7 @@ tensor([5.5834e-09, 5.2879e-08, 1.6952e-09, 1.0000e+00, 2.5976e-17, 1.2479e-19,
 Sum of this vector = 1.0
 </code></pre>
 <h3 id="compute-normalized-attention-scores-for-all-input-words">Compute normalized attention scores for ALL input words</h3>
-<p>Let&rsquo;s compute the normalized attention score $\alpha$ (alpha) for ALL words w.r.t. ALL other words.</p>
+<p>Let&rsquo;s compute the normalized attention score \(\alpha\) (alpha) for ALL words w.r.t. ALL other words.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">normalized_attention_scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">omega_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">normalized_attention_scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">normalized_attention_scores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
@@ -587,17 +592,17 @@ tensor([[2.4049e-09, 1.0642e-11, 6.0284e-11, 9.5202e-31, 1.0108e-10, 1.0688e-18,
          1.0642e-11, 2.4049e-09]])
 Sum of this vector = 8.0
 </code></pre>
-<p>## Compute $z$ vector
-The $z$ vector is an enhanced version of the input word. In other words, it <em>&ldquo;embeds&rdquo;</em> the information about ALL the other inputs words.</p>
+<p>## Compute \(z\) vector
+The \(z\) vector is an enhanced version of the input word. In other words, it <em>&ldquo;embeds&rdquo;</em> the information about ALL the other inputs words.</p>
 <figure class="medium"><img src="/images/self_attention/context-vector.png"
          alt="image"/><figcaption>
             <p>The context vector</p>
         </figcaption>
 </figure>
 
-<p>Note that the dimension of $z = dim_v$, and in this case $dim_v &gt; dim_{word_{embedding}}$, but it turns out that can be arbitrarly chosen.</p>
+<p>Note that the dimension of \(z = dim_v\), and in this case \(dim_v &gt; dim_{word_{embedding}}\), but it turns out that can be arbitrarly chosen.</p>
 <h3 id="example-4">Example #4</h3>
-<p>Let&rsquo;s compute $z$ for the first word w.r.t. ALL other words.</p>
+<p>Let&rsquo;s compute \(z\) for the first word w.r.t. ALL other words.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">context_vector_z_1</span> <span class="o">=</span> <span class="n">normalized_attention_scores_1</span> <span class="o">@</span> <span class="n">values</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Context vector related to the first word w.r.t. ALL other words&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">context_vector_z_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -609,8 +614,8 @@ tensor([5.2083, 4.5906, 3.1900, 4.1853, 4.7579, 4.2178, 3.4120, 5.0137, 4.0621,
         4.6929, 5.4580, 5.6707, 4.9629, 4.2686, 5.6802, 5.3528, 4.5219, 4.6112,
         4.7807])
 </code></pre>
-<h3 id="compute-z-for-all-input-words">Compute $z$ for ALL input words</h3>
-<p>Let&rsquo;s compute $z$ for ALL words w.r.t. ALL other words.</p>
+<h3 id="compute-z-for-all-input-words">Compute \(z\) for ALL input words</h3>
+<p>Let&rsquo;s compute \(z\) for ALL words w.r.t. ALL other words.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">context_z</span> <span class="o">=</span> <span class="n">normalized_attention_scores</span> <span class="o">@</span> <span class="n">values</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Context vector related to ALL input words w.r.t. ALL other words&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">context_z</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -675,7 +680,7 @@ tensor([[ 1.0208e-08,  4.5245e-09,  8.9584e-09,  8.8031e-09,  1.0888e-08,
 </figure>
 </p>
 <h1 id="multi-head-self-attention">Multi-head self-attention</h1>
-<p>Each query has now shape $n_{heads} \times dim_{word_{embedding}}$.</p>
+<p>Each query has now shape \(n_{heads} \times dim_{word_{embedding}}\).</p>
 <figure class="medium"><img src="/images/self_attention/multi-head.png"
          alt="image"/><figcaption>
             <p>A multi self-attention head</p>
@@ -788,7 +793,7 @@ tensor([[[  63.3466,   69.7982,   60.7684,  168.7238,  -35.8708,  -90.1632,
 All input words scores -&gt; omega_all.shape = torch.Size([3, 8, 8])
 </code></pre>
 <h3 id="compute-normalized-attention-scores-for-all-input-words-1">Compute normalized attention scores for ALL input words</h3>
-<p>Let&rsquo;s compute the normalized attention score $\alpha$ (alpha) for ALL words w.r.t. ALL other words.</p>
+<p>Let&rsquo;s compute the normalized attention score \(\alpha\) (alpha) for ALL words w.r.t. ALL other words.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_normalized_attention_scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">multihead_omega_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Multihead normalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">multihead_normalized_attention_scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">multihead_normalized_attention_scores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
@@ -845,8 +850,8 @@ tensor([[[5.5202e-01, 9.7718e-01, 8.2888e-01, 8.5065e-01, 8.6035e-02,
           1.4355e-01, 7.3207e-04, 4.4303e-01]]])
 Sum of this vector = 64.0
 </code></pre>
-<h3 id="compute-z-for-all-input-words-1">Compute $z$ for ALL input words</h3>
-<p>Let&rsquo;s compute $z$ for ALL words w.r.t. ALL other words.</p>
+<h3 id="compute-z-for-all-input-words-1">Compute \(z\) for ALL input words</h3>
+<p>Let&rsquo;s compute \(z\) for ALL words w.r.t. ALL other words.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_context_z</span> <span class="o">=</span> <span class="n">multihead_normalized_attention_scores</span> <span class="o">@</span> <span class="n">multihead_values</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multihead context vector related to ALL input words w.r.t. ALL other words&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">multihead_context_z</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -1057,5 +1062,11 @@ tensor([[[ 1.2550e+01,  8.2323e+00,  9.1246e+00,  2.9574e+00,  1.3149e+01,
     src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
     integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
     crossorigin="anonymous"
-  ></script></body>
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
 </html>

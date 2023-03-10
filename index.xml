@@ -6,11 +6,11 @@
     <description>Recent content on Lorenzo Balzani</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PyTorch implementation of the self-attention mechanism</title>
+      <title>Implement the self-attention mechanism in PyTorch</title>
       <link>https://lorenzobalzani.github.io/post/self_attention/self_attention/</link>
-      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://lorenzobalzani.github.io/post/self_attention/self_attention/</guid>
       
