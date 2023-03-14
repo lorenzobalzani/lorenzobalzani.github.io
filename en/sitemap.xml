@@ -234,5 +234,9 @@
                 hreflang="en"
                 href="https://lorenzobalzani.github.io/tags/index/"
                 />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/portfolio/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
