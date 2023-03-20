@@ -21,21 +21,61 @@
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/attention/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/attention/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/deep-learning/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/deep-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/deep-learning/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/self_attention/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/self_attention/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/self_attention/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/nlp/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/nlp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/nlp/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/</loc>
     <lastmod>2023-03-10T00:00:00+00:00</lastmod>
@@ -71,31 +111,91 @@
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/aws/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/aws_series/2_feature_importance_on_aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/data-wrangler/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/data-wrangler/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/data-wrangler/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/series/data-science-on-aws/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/series/data-science-on-aws/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/series/data-science-on-aws/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/feature-importance/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/feature-importance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/feature-importance/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/sagemaker/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/sagemaker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/sagemaker/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/series/</loc>
     <lastmod>2022-05-02T00:00:00+00:00</lastmod>
@@ -116,21 +216,61 @@
     <lastmod>2022-04-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/aws_series/1_feature_importance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/aws_series/1_feature_importance/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/shap/</loc>
     <lastmod>2022-04-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/shap/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/shap/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/post/aws_series/0_statistical_bias/</loc>
     <lastmod>2022-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/aws_series/0_statistical_bias/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/aws_series/0_statistical_bias/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/statistical-bias/</loc>
     <lastmod>2022-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/tags/statistical-bias/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/tags/statistical-bias/"
+                />
   </url><url>
     <loc>https://lorenzobalzani.github.io/contact/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
@@ -238,5 +378,15 @@
     <loc>https://lorenzobalzani.github.io/portfolio/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/portfolio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/portfolio/"
+                />
   </url>
 </urlset>
