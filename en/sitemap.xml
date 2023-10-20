@@ -287,21 +287,6 @@
                 href="https://lorenzobalzani.github.io/contact/"
                 />
   </url><url>
-    <loc>https://lorenzobalzani.github.io/post/introduction/</loc>
-    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="it"
-                href="https://lorenzobalzani.github.io/it/post/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lorenzobalzani.github.io/post/introduction/"
-                />
-  </url><url>
     <loc>https://lorenzobalzani.github.io/tags/introduction/</loc>
     <lastmod>2022-04-26T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -315,6 +300,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://lorenzobalzani.github.io/tags/introduction/"
+                />
+  </url><url>
+    <loc>https://lorenzobalzani.github.io/post/introduction/</loc>
+    <lastmod>2022-04-26T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="it"
+                href="https://lorenzobalzani.github.io/it/post/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://lorenzobalzani.github.io/post/introduction/"
                 />
   </url><url>
     <loc>https://lorenzobalzani.github.io/tags/me/</loc>

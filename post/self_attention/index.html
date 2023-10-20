@@ -16,7 +16,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Lorenzo Balzani" />
   <meta
     name="description"
@@ -91,8 +91,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
-    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -101,8 +101,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.4c31f3cf7e8e609c897dba88aecac0e8db1ebb4e5c841d3f9ffb01d463973678.js"
-      integrity="sha256-TDHzz36OYJyJfbqIrsrA6Nseu05chB0/n/sB1GOXNng="
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
       crossorigin="anonymous"
     ></script>
   
@@ -125,7 +125,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lorenzobalzani.github.io/post/self_attention/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-03-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-03-10T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
+<meta property="article:modified_time" content="2023-03-10T00:00:00+00:00" /><meta property="og:site_name" content="I&#39;m Lorenzo Balzani" />
 
 
 
@@ -241,7 +241,7 @@
       />
       
         <div class="sidebar__introduction-title">
-          <a href="/">Lorenzo Balzani</a>
+          <a href="/">I&#39;m Lorenzo Balzani</a>
         </div>
       
       <div class="sidebar__introduction-description">
@@ -302,8 +302,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -470,20 +470,20 @@
       <p>Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &ldquo;Attention Is All You Need&rdquo;. Note that this is intended to be an executable and extended version of <a href="https://sebastianraschka.com/blog/2023/self-attention-from-scratch.html">this article</a>.</p>
 <p>Would you like to download the code? Check out this <a href="https://github.com/lorenzobalzani/nlp-dl-experiments">GitHub repository</a>.</p>
 <h1 id="setup">Setup</h1>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">dim_word_embedding</span> <span class="o">=</span> <span class="mi">16</span>
-</code></pre></div><p>Let&rsquo;s map each <strong>unique</strong> word present in the sentence to an index.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dim_word_embedding</span> <span class="o">=</span> <span class="mi">16</span>
+</span></span></code></pre></div><p>Let&rsquo;s map each <strong>unique</strong> word present in the sentence to an index.
 In real-world scenarios, there would be a bigger vocubalary, e.g. hundred of thousands of words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;Life is short, eat dessert first is life&#39;</span>
-<span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="n">n_sentence</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
-<span class="n">dict_words</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">sentence</span><span class="p">))}</span>
-<span class="n">sentence_ints</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">dict_words</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">])</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word dictionary =&#39;</span><span class="p">,</span> <span class="n">dict_words</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Numeric representation of the input sentence =&#39;</span><span class="p">,</span> <span class="n">sentence_ints</span><span class="p">)</span>
-</code></pre></div><pre><code>Word dictionary = {'dessert': 0, 'eat': 1, 'first': 2, 'is': 4, 'life': 6, 'short': 7}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;Life is short, eat dessert first is life&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">n_sentence</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dict_words</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">sentence</span><span class="p">))}</span>
+</span></span><span class="line"><span class="cl"><span class="n">sentence_ints</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">dict_words</span><span class="p">[</span><span class="n">char</span><span class="p">]</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">])</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word dictionary =&#39;</span><span class="p">,</span> <span class="n">dict_words</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Numeric representation of the input sentence =&#39;</span><span class="p">,</span> <span class="n">sentence_ints</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Word dictionary = {'dessert': 0, 'eat': 1, 'first': 2, 'is': 4, 'life': 6, 'short': 7}
 Numeric representation of the input sentence = tensor([6, 4, 7, 1, 0, 2, 4, 6])
 </code></pre>
 <h1 id="single-head-self-attention">Single head self-attention</h1>
@@ -495,46 +495,46 @@ Numeric representation of the input sentence = tensor([6, 4, 7, 1, 0, 2, 4, 6])
 
 <p>Now create a \(n_{words} \cdot dim_{word_{embedding}} = 8 \cdot 16\) embedding tensor.</p>
 <p>These initial values will be randomly generated and \(\dim_{vec} = 16\) is an hyper-parameter.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">n_sentence</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
-<span class="n">embedded_sentence</span> <span class="o">=</span> <span class="n">embedding_layer</span><span class="p">(</span><span class="n">sentence_ints</span><span class="p">)</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Embedded sentence shape =&#39;</span><span class="p">,</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>Embedded sentence shape = torch.Size([8, 16])
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">embedding_layer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">n_sentence</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">embedded_sentence</span> <span class="o">=</span> <span class="n">embedding_layer</span><span class="p">(</span><span class="n">sentence_ints</span><span class="p">)</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Embedded sentence shape =&#39;</span><span class="p">,</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Embedded sentence shape = torch.Size([8, 16])
 </code></pre>
 <p>Let&rsquo;s choose values for Queries, Keys, and Values.
 Since Queries and Keys vector are multiplied afterward, their dimensions MUST be equal.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_v</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span>
-<span class="n">dim_k</span> <span class="o">=</span> <span class="n">dim_q</span>
-<span class="n">W_q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
-<span class="n">W_k</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim_k</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
-<span class="n">W_v</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim_v</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
-</code></pre></div><h2 id="compute-queries-keys-values-for-the-input-words">Compute queries, keys, values for the input words</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_v</span> <span class="o">=</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">28</span>
+</span></span><span class="line"><span class="cl"><span class="n">dim_k</span> <span class="o">=</span> <span class="n">dim_q</span>
+</span></span><span class="line"><span class="cl"><span class="n">W_q</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">W_k</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim_k</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">W_v</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">dim_v</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="compute-queries-keys-values-for-the-input-words">Compute queries, keys, values for the input words</h2>
 <p>First, try to understand this on single words.</p>
 <h3 id="example-1">Example #1</h3>
 <p>Compute query, key, and value vector related to the first and second words in the sentence (\(idx = 0, 1\)).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">x_1</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
-<span class="n">query_1</span> <span class="o">=</span> <span class="n">W_q</span> <span class="o">@</span> <span class="n">x_1</span>
-<span class="n">key_1</span> <span class="o">=</span> <span class="n">W_k</span> <span class="o">@</span> <span class="n">x_1</span>
-<span class="n">value_1</span> <span class="o">=</span> <span class="n">W_v</span> <span class="o">@</span> <span class="n">x_1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word idx =&#39;</span><span class="p">,</span> <span class="n">word_idx</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Query size =&#39;</span><span class="p">,</span> <span class="n">query_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Key size =&#39;</span><span class="p">,</span> <span class="n">key_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Value size =&#39;</span><span class="p">,</span> <span class="n">value_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>Word idx = 0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_1</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">query_1</span> <span class="o">=</span> <span class="n">W_q</span> <span class="o">@</span> <span class="n">x_1</span>
+</span></span><span class="line"><span class="cl"><span class="n">key_1</span> <span class="o">=</span> <span class="n">W_k</span> <span class="o">@</span> <span class="n">x_1</span>
+</span></span><span class="line"><span class="cl"><span class="n">value_1</span> <span class="o">=</span> <span class="n">W_v</span> <span class="o">@</span> <span class="n">x_1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word idx =&#39;</span><span class="p">,</span> <span class="n">word_idx</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Query size =&#39;</span><span class="p">,</span> <span class="n">query_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Key size =&#39;</span><span class="p">,</span> <span class="n">key_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Value size =&#39;</span><span class="p">,</span> <span class="n">value_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Word idx = 0
 	Query size = torch.Size([24])
 	Key size = torch.Size([24])
 	Value size = torch.Size([28])
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">x_2</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
-<span class="n">query_2</span> <span class="o">=</span> <span class="n">W_q</span> <span class="o">@</span> <span class="n">x_2</span>
-<span class="n">key_2</span> <span class="o">=</span> <span class="n">W_k</span> <span class="o">@</span> <span class="n">x_2</span>
-<span class="n">value_2</span> <span class="o">=</span> <span class="n">W_v</span> <span class="o">@</span> <span class="n">x_2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word idx =&#39;</span><span class="p">,</span> <span class="n">word_idx</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Query size =&#39;</span><span class="p">,</span> <span class="n">query_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Key size =&#39;</span><span class="p">,</span> <span class="n">key_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Value size =&#39;</span><span class="p">,</span> <span class="n">value_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>Word idx = 1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_2</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">query_2</span> <span class="o">=</span> <span class="n">W_q</span> <span class="o">@</span> <span class="n">x_2</span>
+</span></span><span class="line"><span class="cl"><span class="n">key_2</span> <span class="o">=</span> <span class="n">W_k</span> <span class="o">@</span> <span class="n">x_2</span>
+</span></span><span class="line"><span class="cl"><span class="n">value_2</span> <span class="o">=</span> <span class="n">W_v</span> <span class="o">@</span> <span class="n">x_2</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word idx =&#39;</span><span class="p">,</span> <span class="n">word_idx</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Query size =&#39;</span><span class="p">,</span> <span class="n">query_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Key size =&#39;</span><span class="p">,</span> <span class="n">key_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Value size =&#39;</span><span class="p">,</span> <span class="n">value_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Word idx = 1
 	Query size = torch.Size([24])
 	Key size = torch.Size([24])
 	Value size = torch.Size([28])
@@ -542,13 +542,13 @@ Since Queries and Keys vector are multiplied afterward, their dimensions MUST be
 <h3 id="compute-queries-keys-values-for-all-input-words">Compute queries, keys, values for ALL input words</h3>
 <p>Now that I have understood the process, let&rsquo;s extend this to all the input words.
 Transpose the matrices to have words on rows and vector components on columns.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">queries</span> <span class="o">=</span> <span class="p">(</span><span class="n">W_q</span> <span class="o">@</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">keys</span> <span class="o">=</span> <span class="p">(</span><span class="n">W_k</span> <span class="o">@</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">W_v</span> <span class="o">@</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; queries.shape =&#39;</span><span class="p">,</span> <span class="n">queries</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; keys.shape =&#39;</span><span class="p">,</span> <span class="n">keys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; values.shape =&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>All input words -&gt; queries.shape = torch.Size([8, 24])
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">queries</span> <span class="o">=</span> <span class="p">(</span><span class="n">W_q</span> <span class="o">@</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="n">keys</span> <span class="o">=</span> <span class="p">(</span><span class="n">W_k</span> <span class="o">@</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="n">values</span> <span class="o">=</span> <span class="p">(</span><span class="n">W_v</span> <span class="o">@</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; queries.shape =&#39;</span><span class="p">,</span> <span class="n">queries</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; keys.shape =&#39;</span><span class="p">,</span> <span class="n">keys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; values.shape =&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>All input words -&gt; queries.shape = torch.Size([8, 24])
 All input words -&gt; keys.shape = torch.Size([8, 24])
 All input words -&gt; values.shape = torch.Size([8, 28])
 </code></pre>
@@ -556,24 +556,24 @@ All input words -&gt; values.shape = torch.Size([8, 28])
 <p>As before, I am trying to understand this concept on single words.</p>
 <h3 id="example-2">Example #2</h3>
 <p>Let&rsquo;s compute the unnormalized attention score \(\omega\) (omega) for the first word w.r.t. the 5th word</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">omega_1_5</span> <span class="o">=</span> <span class="n">queries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">keys</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unnormalized attention score of first word w.r.t. 5th word =&#39;</span><span class="p">,</span> <span class="n">omega_1_5</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
-</code></pre></div><pre><code>Unnormalized attention score of first word w.r.t. 5th word = -46.02456283569336
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">omega_1_5</span> <span class="o">=</span> <span class="n">queries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">keys</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unnormalized attention score of first word w.r.t. 5th word =&#39;</span><span class="p">,</span> <span class="n">omega_1_5</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+</span></span></code></pre></div><pre><code>Unnormalized attention score of first word w.r.t. 5th word = -46.02456283569336
 </code></pre>
 <h3 id="compute-unnormalized-attention-scores-wrt-all-input-words">Compute unnormalized attention scores w.r.t. ALL input words</h3>
 <p>Let&rsquo;s compute the unnormalized attention scores for the first word w.r.t. to all other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">omega_1_all</span> <span class="o">=</span> <span class="n">queries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">keys</span><span class="o">.</span><span class="n">T</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unnormalized attention scores of first word w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">omega_1_all</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</code></pre></div><pre><code>Unnormalized attention scores of first word w.r.t. ALL other words:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">omega_1_all</span> <span class="o">=</span> <span class="n">queries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">@</span> <span class="n">keys</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unnormalized attention scores of first word w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">omega_1_all</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Unnormalized attention scores of first word w.r.t. ALL other words:
 tensor([ 47.9667,  58.9805,  42.1271, 141.0643, -46.0246, -72.1767,  58.9805,
          47.9667])
 </code></pre>
 <h3 id="compute-unnormalized-attention-scores-for-all-input-words">Compute unnormalized attention scores for ALL input words</h3>
 <p>Let&rsquo;s compute the unnormalized attention scores for all the words w.r.t. to all other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">omega_all</span> <span class="o">=</span> <span class="n">queries</span> <span class="o">@</span> <span class="n">keys</span><span class="o">.</span><span class="n">T</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unnormalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">omega_all</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;All input words scores -&gt; omega_all.shape =&#34;</span><span class="p">,</span> <span class="n">omega_all</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-</code></pre></div><pre><code>Unnormalized attention scores of ALL words w.r.t. ALL other words:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">omega_all</span> <span class="o">=</span> <span class="n">queries</span> <span class="o">@</span> <span class="n">keys</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unnormalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">omega_all</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;All input words scores -&gt; omega_all.shape =&#34;</span><span class="p">,</span> <span class="n">omega_all</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span></code></pre></div><pre><code>Unnormalized attention scores of ALL words w.r.t. ALL other words:
 tensor([[  47.9667,   58.9805,   42.1272,  141.0642,  -46.0246,  -72.1767,
            58.9805,   47.9667],
         [  58.7503,   93.6661,   65.4516,  229.0244,  -51.6797, -109.5712,
@@ -597,20 +597,20 @@ All input words scores -&gt; omega_all.shape = torch.Size([8, 8])
 Note that the sum of the values is 1 (thanks to the softmax function).</p>
 <h3 id="example-3">Example #3</h3>
 <p>Let&rsquo;s compute the normalized attention score \(\alpha\) (alpha) for the first word w.r.t. the ALL other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">normalized_attention_scores_1</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">omega_1_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized attention scores of first word w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">normalized_attention_scores_1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">normalized_attention_scores_1</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
-</code></pre></div><pre><code>Normalized attention scores of first word w.r.t. ALL other words:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">normalized_attention_scores_1</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">omega_1_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized attention scores of first word w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">normalized_attention_scores_1</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">normalized_attention_scores_1</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+</span></span></code></pre></div><pre><code>Normalized attention scores of first word w.r.t. ALL other words:
 tensor([5.5834e-09, 5.2879e-08, 1.6952e-09, 1.0000e+00, 2.5976e-17, 1.2479e-19,
         5.2879e-08, 5.5834e-09])
 Sum of this vector = 1.0
 </code></pre>
 <h3 id="compute-normalized-attention-scores-for-all-input-words">Compute normalized attention scores for ALL input words</h3>
 <p>Let&rsquo;s compute the normalized attention score \(\alpha\) (alpha) for ALL words w.r.t. ALL other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">normalized_attention_scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">omega_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">normalized_attention_scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">normalized_attention_scores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
-</code></pre></div><pre><code>Normalized attention scores of ALL words w.r.t. ALL other words:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">normalized_attention_scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">omega_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Normalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">normalized_attention_scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">normalized_attention_scores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+</span></span></code></pre></div><pre><code>Normalized attention scores of ALL words w.r.t. ALL other words:
 tensor([[2.4049e-09, 1.0642e-11, 6.0284e-11, 9.5202e-31, 1.0108e-10, 1.0688e-18,
          1.0642e-11, 2.4049e-09],
         [2.1730e-08, 1.2645e-08, 7.0456e-09, 5.9746e-23, 3.1866e-11, 5.1745e-22,
@@ -640,11 +640,11 @@ The \(z\) vector is an enhanced version of the input word. In other words, it <e
 <p>Note that the dimension of \(z = dim_v\), and in this case \(dim_v &gt; dim_{word_{embedding}}\), but it turns out that can be arbitrarly chosen.</p>
 <h3 id="example-4">Example #4</h3>
 <p>Let&rsquo;s compute \(z\) for the first word w.r.t. ALL other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">context_vector_z_1</span> <span class="o">=</span> <span class="n">normalized_attention_scores_1</span> <span class="o">@</span> <span class="n">values</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Context vector related to the first word w.r.t. ALL other words&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">context_vector_z_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">context_vector_z_1</span><span class="p">)</span>
-</code></pre></div><pre><code>Context vector related to the first word w.r.t. ALL other words
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">context_vector_z_1</span> <span class="o">=</span> <span class="n">normalized_attention_scores_1</span> <span class="o">@</span> <span class="n">values</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Context vector related to the first word w.r.t. ALL other words&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">context_vector_z_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">context_vector_z_1</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Context vector related to the first word w.r.t. ALL other words
 Shape = torch.Size([28])
 tensor([5.2083, 4.5906, 3.1900, 4.1853, 4.7579, 4.2178, 3.4120, 5.0137, 4.0621,
         4.1455, 6.3549, 3.0836, 6.4934, 4.0425, 4.8676, 3.0821, 6.8482, 5.5784,
@@ -653,11 +653,11 @@ tensor([5.2083, 4.5906, 3.1900, 4.1853, 4.7579, 4.2178, 3.4120, 5.0137, 4.0621,
 </code></pre>
 <h3 id="compute-z-for-all-input-words">Compute \(z\) for ALL input words</h3>
 <p>Let&rsquo;s compute \(z\) for ALL words w.r.t. ALL other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">context_z</span> <span class="o">=</span> <span class="n">normalized_attention_scores</span> <span class="o">@</span> <span class="n">values</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Context vector related to ALL input words w.r.t. ALL other words&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">context_z</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">context_z</span><span class="p">)</span>
-</code></pre></div><pre><code>Context vector related to ALL input words w.r.t. ALL other words
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">context_z</span> <span class="o">=</span> <span class="n">normalized_attention_scores</span> <span class="o">@</span> <span class="n">values</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Context vector related to ALL input words w.r.t. ALL other words&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">context_z</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">context_z</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Context vector related to ALL input words w.r.t. ALL other words
 Shape = torch.Size([8, 28])
 tensor([[ 1.0208e-08,  4.5245e-09,  8.9584e-09,  8.8031e-09,  1.0888e-08,
           1.1263e-08,  6.6825e-09,  9.1426e-09,  3.3903e-09,  9.7982e-09,
@@ -724,59 +724,59 @@ tensor([[ 1.0208e-08,  4.5245e-09,  8.9584e-09,  8.8031e-09,  1.0888e-08,
         </figcaption>
 </figure>
 
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">n_heads</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">multihead_W_query</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span> 
-<span class="n">multihead_W_key</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_k</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
-<span class="n">multihead_W_value</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_v</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
-</code></pre></div><p>Follow this example with the first word.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">x_1</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
-<span class="n">multihead_query_1</span> <span class="o">=</span> <span class="n">multihead_W_query</span> <span class="o">@</span> <span class="n">x_1</span>
-<span class="n">multihead_key_1</span> <span class="o">=</span> <span class="n">multihead_W_key</span> <span class="o">@</span> <span class="n">x_1</span>
-<span class="n">multihead_value_1</span> <span class="o">=</span> <span class="n">multihead_W_value</span> <span class="o">@</span> <span class="n">x_1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word idx =&#39;</span><span class="p">,</span> <span class="n">word_idx</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Multihead-query size =&#39;</span><span class="p">,</span> <span class="n">multihead_query_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Multihead-key size =&#39;</span><span class="p">,</span> <span class="n">multihead_key_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Multihead-value size =&#39;</span><span class="p">,</span> <span class="n">multihead_value_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>Word idx = 0
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">n_heads</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_W_query</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_q</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="n">multihead_W_key</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_k</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_W_value</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="n">dim_v</span><span class="p">,</span> <span class="n">dim_word_embedding</span><span class="p">)</span>
+</span></span></code></pre></div><p>Follow this example with the first word.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">word_idx</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_1</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="p">[</span><span class="n">word_idx</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_query_1</span> <span class="o">=</span> <span class="n">multihead_W_query</span> <span class="o">@</span> <span class="n">x_1</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_key_1</span> <span class="o">=</span> <span class="n">multihead_W_key</span> <span class="o">@</span> <span class="n">x_1</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_value_1</span> <span class="o">=</span> <span class="n">multihead_W_value</span> <span class="o">@</span> <span class="n">x_1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Word idx =&#39;</span><span class="p">,</span> <span class="n">word_idx</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Multihead-query size =&#39;</span><span class="p">,</span> <span class="n">multihead_query_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Multihead-key size =&#39;</span><span class="p">,</span> <span class="n">multihead_key_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">Multihead-value size =&#39;</span><span class="p">,</span> <span class="n">multihead_value_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Word idx = 0
 	Multihead-query size = torch.Size([3, 24])
 	Multihead-key size = torch.Size([3, 24])
 	Multihead-value size = torch.Size([3, 28])
 </code></pre>
 <p>But for extend this example to all the words, we have to use the <code>bmm()</code> (Batch Matrix Mutliplication) method from <strong>PyTorch</strong>. It&rsquo;s useful when there&rsquo;s the need to deal with tensor. The effective <code>matmul</code>is performed along the last two dimensions, while the first one representing heads is preserved.</p>
 <p>Finally, to make the input feasible (i.e., choose the right dimensions) for the multi-head attention layer, I need to replicate it for the number of attention heads (in this case, three times).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">repeated_inputs</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Repeated input size =&#39;</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>Repeated input size = torch.Size([3, 16, 8])
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">repeated_inputs</span> <span class="o">=</span> <span class="n">embedded_sentence</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">n_heads</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Repeated input size =&#39;</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Repeated input size = torch.Size([3, 16, 8])
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_queries</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_W_query</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="p">)</span>
-<span class="n">multihead_keys</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_W_key</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="p">)</span>
-<span class="n">multihead_values</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_W_value</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_queries.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_queries</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_keys.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_values.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>All input words -&gt; multihead_queries.shape = torch.Size([3, 24, 8])
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">multihead_queries</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_W_query</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_keys</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_W_key</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_values</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_W_value</span><span class="p">,</span> <span class="n">repeated_inputs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_queries.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_queries</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_keys.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_values.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>All input words -&gt; multihead_queries.shape = torch.Size([3, 24, 8])
 All input words -&gt; multihead_keys.shape = torch.Size([3, 24, 8])
 All input words -&gt; multihead_values.shape = torch.Size([3, 28, 8])
 </code></pre>
 <p>But - as can be seen from above - the last two dimensions are swapped, because I would like to have words as the second dimension and vector components as third one. Hence, let&rsquo;s permute (i.e., swap) the last two dimensions.</p>
 <p>Here, the <code>permute()</code> method is asking the desidered ordering of dimensions.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_queries</span> <span class="o">=</span> <span class="n">multihead_queries</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">multihead_keys</span> <span class="o">=</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">multihead_values</span> <span class="o">=</span> <span class="n">multihead_values</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_queries.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_queries</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_keys.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_values.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</code></pre></div><pre><code>All input words -&gt; multihead_queries.shape = torch.Size([3, 8, 24])
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">multihead_queries</span> <span class="o">=</span> <span class="n">multihead_queries</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_keys</span> <span class="o">=</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">multihead_values</span> <span class="o">=</span> <span class="n">multihead_values</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_queries.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_queries</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_keys.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All input words -&gt; multihead_values.shape =&#39;</span><span class="p">,</span> <span class="n">multihead_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>All input words -&gt; multihead_queries.shape = torch.Size([3, 8, 24])
 All input words -&gt; multihead_keys.shape = torch.Size([3, 8, 24])
 All input words -&gt; multihead_values.shape = torch.Size([3, 8, 28])
 </code></pre>
 <h2 id="compute-unnormalized-attention-scores">Compute unnormalized attention scores</h2>
 <p>As did before, compute the unnormalzied attention scores for each head.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_omega_all</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_queries</span><span class="p">,</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unnormalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">multihead_omega_all</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;All input words scores -&gt; omega_all.shape =&#34;</span><span class="p">,</span> <span class="n">multihead_omega_all</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
-</code></pre></div><pre><code>Unnormalized attention scores of ALL words w.r.t. ALL other words:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">multihead_omega_all</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">multihead_queries</span><span class="p">,</span> <span class="n">multihead_keys</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Unnormalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">multihead_omega_all</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;All input words scores -&gt; omega_all.shape =&#34;</span><span class="p">,</span> <span class="n">multihead_omega_all</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> 
+</span></span></code></pre></div><pre><code>Unnormalized attention scores of ALL words w.r.t. ALL other words:
 tensor([[[  63.3466,   69.7982,   60.7684,  168.7238,  -35.8708,  -90.1632,
             69.7982,   63.3466],
          [  64.3794,   50.0433,   56.6445,  156.4643,  -33.4781,  -78.7985,
@@ -831,10 +831,10 @@ All input words scores -&gt; omega_all.shape = torch.Size([3, 8, 8])
 </code></pre>
 <h3 id="compute-normalized-attention-scores-for-all-input-words-1">Compute normalized attention scores for ALL input words</h3>
 <p>Let&rsquo;s compute the normalized attention score \(\alpha\) (alpha) for ALL words w.r.t. ALL other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_normalized_attention_scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">multihead_omega_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Multihead normalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">multihead_normalized_attention_scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">multihead_normalized_attention_scores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
-</code></pre></div><pre><code>Multihead normalized attention scores of ALL words w.r.t. ALL other words:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">multihead_normalized_attention_scores</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">multihead_omega_all</span> <span class="o">/</span> <span class="n">dim_k</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Multihead normalized attention scores of ALL words w.r.t. ALL other words:</span><span class="se">\n</span><span class="si">{</span><span class="n">multihead_normalized_attention_scores</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sum of this vector =&#39;</span><span class="p">,</span> <span class="n">multihead_normalized_attention_scores</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+</span></span></code></pre></div><pre><code>Multihead normalized attention scores of ALL words w.r.t. ALL other words:
 tensor([[[5.5202e-01, 9.7718e-01, 8.2888e-01, 8.5065e-01, 8.6035e-02,
           1.8976e-03, 9.7718e-01, 5.5202e-01],
          [1.5916e-01, 5.0917e-02, 4.2787e-01, 8.0445e-05, 6.5592e-01,
@@ -889,11 +889,11 @@ Sum of this vector = 64.0
 </code></pre>
 <h3 id="compute-z-for-all-input-words-1">Compute \(z\) for ALL input words</h3>
 <p>Let&rsquo;s compute \(z\) for ALL words w.r.t. ALL other words.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">multihead_context_z</span> <span class="o">=</span> <span class="n">multihead_normalized_attention_scores</span> <span class="o">@</span> <span class="n">multihead_values</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multihead context vector related to ALL input words w.r.t. ALL other words&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">multihead_context_z</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">multihead_context_z</span><span class="p">)</span>
-</code></pre></div><pre><code>Multihead context vector related to ALL input words w.r.t. ALL other words
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">multihead_context_z</span> <span class="o">=</span> <span class="n">multihead_normalized_attention_scores</span> <span class="o">@</span> <span class="n">multihead_values</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multihead context vector related to ALL input words w.r.t. ALL other words&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape =&#39;</span><span class="p">,</span> <span class="n">multihead_context_z</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">multihead_context_z</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Multihead context vector related to ALL input words w.r.t. ALL other words
 Shape = torch.Size([3, 8, 28])
 tensor([[[ 1.2550e+01,  8.2323e+00,  9.1246e+00,  2.9574e+00,  1.3149e+01,
            1.1474e+01,  5.4783e+00,  8.9908e+00,  8.1721e+00,  9.5334e+00,
@@ -1059,7 +1059,7 @@ tensor([[[ 1.2550e+01,  8.2323e+00,  9.1246e+00,  2.9574e+00,  1.3149e+01,
           <h2>comments</h2>
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -1096,8 +1096,8 @@ tensor([[[ 1.2550e+01,  8.2323e+00,  9.1246e+00,  2.9574e+00,  1.3149e+01,
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer

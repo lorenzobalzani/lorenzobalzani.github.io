@@ -16,7 +16,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Lorenzo Balzani" />
   <meta
     name="description"
@@ -91,8 +91,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
-    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -101,8 +101,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.4c31f3cf7e8e609c897dba88aecac0e8db1ebb4e5c841d3f9ffb01d463973678.js"
-      integrity="sha256-TDHzz36OYJyJfbqIrsrA6Nseu05chB0/n/sB1GOXNng="
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
       crossorigin="anonymous"
     ></script>
   
@@ -125,7 +125,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lorenzobalzani.github.io/it/post/aws_series/0_statistical_bias/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-04-28T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="I&#39;m Lorenzo Balzani" />
 <meta property="og:see_also" content="https://lorenzobalzani.github.io/it/post/aws_series/2_feature_importance_on_aws/" /><meta property="og:see_also" content="https://lorenzobalzani.github.io/it/post/aws_series/1_feature_importance/" />
 
 
@@ -148,7 +148,7 @@
 
 
     ",
-        "inLanguage": "en",
+        "inLanguage": "it",
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -196,7 +196,7 @@
 
     ,
         "url" : "https:\/\/lorenzobalzani.github.io\/it\/post\/aws_series\/0_statistical_bias\/",
-        "wordCount" : "1316",
+        "wordCount" : "1319",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -242,7 +242,7 @@
       />
       
         <div class="sidebar__introduction-title">
-          <a href="/it">Lorenzo Balzani</a>
+          <a href="/it">I&#39;m Lorenzo Balzani</a>
         </div>
       
       <div class="sidebar__introduction-description">
@@ -303,8 +303,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
@@ -483,8 +483,8 @@ In this kind of dataset, there are more heavily weighted (or represented) instan
 <h1 id="measuring-statistical-bias">Measuring statistical bias</h1>
 <p>Which metrics could you use to measure statistical bias? Well, you may take advantage of the following ones:</p>
 <ul>
-<li>Class imbalance (CI): for instance, let&rsquo;s consider a product reviews dataset. CI answers the question &ldquo;does a product category have disproportionately more instances than others?&quot;;</li>
-<li>Difference in Proportions of Labels (DPL): measures the imbalance of positive outcomes between different facet values. In the same example as before, it answers the question <em>&ldquo;does a product category has disproportionately higher ratings than others?&quot;</em>.</li>
+<li>Class imbalance (CI): for instance, let&rsquo;s consider a product reviews dataset. CI answers the question &ldquo;does a product category have disproportionately more instances than others?&rdquo;;</li>
+<li>Difference in Proportions of Labels (DPL): measures the imbalance of positive outcomes between different facet values. In the same example as before, it answers the question <em>&ldquo;does a product category has disproportionately higher ratings than others?&rdquo;</em>.</li>
 </ul>
 <h1 id="tools">Tools</h1>
 <p>Data bias could be detected with many different tools but since I use <strong>AWS</strong> I&rsquo;ll take advantage of <strong>SageMaker</strong> sub-tools.</p>
@@ -507,44 +507,44 @@ For now, I&rsquo;m going to focus on the statistical bias detection and report g
 
 <p>To start using Clarify, let&rsquo;s use the following code as a template.</p>
 <h3 id="code-snippet-1">Code snippet #1</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sagemaker</span> <span class="kn">import</span> <span class="n">clarify</span>
-
-<span class="n">clarify_processor</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">SageMakerClarifyProcessor</span><span class="p">(</span>
-    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="p">,</span>
-    <span class="n">instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">instance_type</span><span class="o">=</span><span class="s1">&#39;ml.c5.2xlarge&#39;</span><span class="p">,</span>
-    <span class="n">sagemaker_session</span><span class="o">=</span><span class="n">sess</span>
-<span class="p">)</span>
-
-<span class="n">bias_report_output_path</span> <span class="o">=</span> <span class="o">&lt;&lt;</span> <span class="n">Define</span> <span class="n">S3</span> <span class="n">path</span> <span class="o">&gt;&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sagemaker</span> <span class="kn">import</span> <span class="n">clarify</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">clarify_processor</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">SageMakerClarifyProcessor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">instance_type</span><span class="o">=</span><span class="s1">&#39;ml.c5.2xlarge&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sagemaker_session</span><span class="o">=</span><span class="n">sess</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">bias_report_output_path</span> <span class="o">=</span> <span class="o">&lt;&lt;</span> <span class="n">Define</span> <span class="n">S3</span> <span class="n">path</span> <span class="o">&gt;&gt;</span></span></span></code></pre></div>
 <h4 id="explanation">Explanation</h4>
 <p>As you could have imaged reading the previous code snippet, the goal is to set up a distributed cluster to scale up your bias detection process if needed.
 To achieve this, let&rsquo;s import the Clarify library from the SageMaker SDK. Once you have the Clarify library, construct the object, SageMaker Clarify Processor using the library. By using two parameters, instance type and instance count, you can scale up the distributed cluster to the capacity that you need. The instant count represents the number of nodes that are included in the cluster, and the instance type represents the processing capacity of each node in the cluster. The processing capacity is measured by the node&rsquo;s compute capacity, memory, and network capabilities. Once you have configured the distributor cluster, next, you specify an S3 location, where you want the bias report to be saved. That&rsquo;s the parameter <code>bias_report_output_path</code>.</p>
 <h3 id="code-snippet-2">Code snippet #2</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bias_data_config</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">DataConfig</span><span class="p">(</span>
-    <span class="n">s3_data_input_path</span><span class="o">=...</span><span class="p">,</span>
-    <span class="n">s3_output_path</span><span class="o">=...</span><span class="p">,</span>
-    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sentiment&#39;</span><span class="p">,</span>
-    <span class="n">headers</span><span class="o">=</span><span class="n">df_balanced</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span>
-    <span class="n">dataset_type</span><span class="o">=</span><span class="s1">&#39;text/csv&#39;</span>
-<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bias_data_config</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">DataConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s3_data_input_path</span><span class="o">=...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s3_output_path</span><span class="o">=...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sentiment&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">headers</span><span class="o">=</span><span class="n">df_balanced</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dataset_type</span><span class="o">=</span><span class="s1">&#39;text/csv&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div>
 <h4 id="explanation-1">Explanation</h4>
 <p>Once this step is done, the next step is to configure the data config object on the Clarify library. The data config object represents the details of your data. So as you can expect, it has the input and output location of your data, in S3, as well as the label that you&rsquo;re trying to predict, using that dataset. In this case here, the label that we are trying to predict is <code>sentiment</code>.</p>
 <h3 id="code-snippet-2-1">Code snippet #2</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bias_config</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">BiasConfig</span><span class="p">(</span>
-    <span class="n">label_values_or_threshold</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
-    <span class="n">facet_name</span><span class="o">=</span><span class="s1">&#39;product_category&#39;</span>
-<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bias_config</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">BiasConfig</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">label_values_or_threshold</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">facet_name</span><span class="o">=</span><span class="s1">&#39;product_category&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div>
 <h4 id="explanation-2">Explanation</h4>
 <p>Next, you configure the bias config object on Clarify library. The bias config object captures the facet or the featured name that you are trying to evaluate for bias or imbalances. In this case, you&rsquo;re trying to find out imbalances in the <code>product_category</code> feature. The parameter <code>label_values_or_threshold</code> defines the desired values for the labels.</p>
 <h3 id="code-snippet-3">Code snippet #3</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">clarify_processor</span><span class="o">.</span><span class="n">run_pre_training_bias</span><span class="p">(</span>
-    <span class="n">data_config</span><span class="o">=...</span><span class="p">,</span>
-    <span class="n">data_bias_config</span><span class="o">=...</span><span class="p">,</span>
-    <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CI&#39;</span><span class="p">,</span> <span class="s1">&#39;DPL&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
-    <span class="n">wait</span><span class="o">=&lt;&lt;</span><span class="kc">False</span><span class="o">/</span><span class="kc">True</span><span class="o">&gt;&gt;</span>
-    <span class="n">logs</span><span class="o">=&lt;&lt;</span><span class="kc">False</span><span class="o">/</span><span class="kc">True</span><span class="o">&gt;&gt;</span>
-<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">clarify_processor</span><span class="o">.</span><span class="n">run_pre_training_bias</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data_config</span><span class="o">=...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data_bias_config</span><span class="o">=...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CI&#39;</span><span class="p">,</span> <span class="s1">&#39;DPL&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">wait</span><span class="o">=&lt;&lt;</span><span class="kc">False</span><span class="o">/</span><span class="kc">True</span><span class="o">&gt;&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">logs</span><span class="o">=&lt;&lt;</span><span class="kc">False</span><span class="o">/</span><span class="kc">True</span><span class="o">&gt;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div>
 <h4 id="explanation-3">Explanation</h4>
 <p>Once you have configured those three objects, you are ready to run the pre-training bias method on the Clarify processor. In addition to specifying the data config and the data bias config that you already configured, you can also specify the methods that you want to evaluate for bias. So, these methods are the metrics that you&rsquo;ve already learned about to detect bias. The metrics here are the CI (i.e. the class imbalance), and the DPL (i.e. Difference in Proportions of Labels ). You can specify a few other methods here as well. The wait parameter specifies whether this bias detection job should block the rest of your code or should be executed in the background. Similarly, the logs parameter specifies whether you want to capture the logs or not. Once the configuration of the pre-training bias method is done, you launch this job.</p>
 <h2 id="in-the-background">In the background</h2>
@@ -627,7 +627,7 @@ Once the processing cluster has processed the data, the transformed data is put 
           <h2>commenti</h2>
           <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -664,8 +664,8 @@ Once the processing cluster has processed the data, the transformed data is put 
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
       defer
