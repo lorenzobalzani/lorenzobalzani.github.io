@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+      
+        Chapter #2: feature importance with SHAP |
+      Lorenzo Balzani
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.119.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Lorenzo Balzani" />
+  <meta
+    name="description"
+    content="Feature importance with SHAP."
+  />
+  
+    <meta name="google-site-verification" content="vu8FC47qAuUJH6xhZubBHWRBi2P5WUx_pRtgTUi1Tzw" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.1147aa5bacb4bce677a0e264073829caedb82fd18ea07a5f1d80521f539d1c45.css"
+      integrity="sha256-EUeqW6y0vOZ3oOJkBzgpyu24L9GOoHpfHYBSH1OdHEU="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://lorenzobalzani.github.io/post/aws_series/1_feature_importance/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/>
+
+<meta name="twitter:title" content="Chapter #2: feature importance with SHAP"/>
+<meta name="twitter:description" content="Feature importance with SHAP."/>
+
+
+
+  
+  <meta property="og:title" content="Chapter #2: feature importance with SHAP" />
+<meta property="og:description" content="Feature importance with SHAP." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lorenzobalzani.github.io/post/aws_series/1_feature_importance/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-29T00:00:00+00:00" /><meta property="og:site_name" content="I&#39;m Lorenzo Balzani" />
+<meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/" /><meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/0_statistical_bias/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Chapter #2: feature importance with SHAP",
+        "headline": "Chapter #2: feature importance with SHAP",
+        "alternativeHeadline": "",
+        "description": "
+      Feature importance with SHAP.
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/1_feature_importance\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-04-29T00:00:00.00Z",
+        "datePublished": "2022-04-29T00:00:00.00Z",
+        "dateModified": "2022-04-29T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Lorenzo Balzani",
+            "url": "https://lorenzobalzani.github.io/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/lorenzobalzani.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://lorenzobalzani.github.io/images/wallpaper.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/1_feature_importance\/",
+        "wordCount" : "454",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "feature importance"
+
+    
+      
+        ,
+
+      
+      "SHAP"
+
+    
+      
+        ,
+
+      
+      "aws"
+
+    
+      
+        ,
+
+      
+      "sagemaker"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.png"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">I&#39;m Lorenzo Balzani</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>NLP Data Scientist @ Prometeia<br />MSc student in AI @ Unibo<br />BSc in Computer Science and Engineering @ Unibo<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/lorenzobalzani/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/lorenzobalzani"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:balzanilo@icloud.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Lorenzo Balzani
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/portfolio/"
+              
+              title=""
+              >Portfolio</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/resume/"
+              
+              title=""
+              >Resume</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+        <li class="nav__list-item">
+          <div class="optionswitch">
+            <input class="optionswitch__picker" type="checkbox" id="languagepicker" hidden />
+            <label class="optionswitch__label" for="languagepicker"
+              >EN <i class="fa fa-angle-down" aria-hidden="true"></i
+            ></label>
+            <div class="optionswitch__triangle"></div>
+            <ul class="optionswitch__list">
+              
+                <li class="optionswitch__list-item">
+                  <a href="/it/post/aws_series/1_feature_importance/" title="IT"
+                    ><span
+                      
+                      aria-label="IT"
+                      >IT</span
+                    >
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </li>
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Chapter #2: Feature Importance With SHAP</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  4/29/2022
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+      <h1 id="hi-folks-">Hi folks! 👋</h1>
+<p>In the previous post I talked about <strong>EDA</strong> and in particular <strong>statistical bias</strong>. Now it&rsquo;s the turn of <strong>feature importance</strong>.</p>
+<h1 id="whats-feature-importance">What&rsquo;s feature importance?</h1>
+<p>Feature importance is the idea of explaining the individual features that make up a training data set, using a score called <em>important score</em>.</p>
+<h2 id="example">Example</h2>
+<p>Let&rsquo;s take, for example, the product review data set. It consists of multiple different features, and I am trying to build a product sentiment prediction model out of that data set. I would be interested in understanding what features will play a role in that final model; that is where feature importance comes into the picture.</p>
+<h2 id="why-should-i-consider-it">Why should I consider it?</h2>
+<p>Some features from my data set could be more relevant to the final model than others. Using feature importance, I can rank the individual features in the order of their importance and contribution to the final model. Feature importance allows me to evaluate how useful or valuable a feature is, concerning the other features that exist in the same data set.</p>
+<h2 id="shap-framework">SHAP framework</h2>
+<p>Feature importance is based on a very popular open-source framework called SHAP (i.e. <strong>SH</strong>apley <strong>A</strong>dditive Ex<strong>P</strong>lanations).
+The framework itself is based on Shapley values: a topic at the core of the game theory.</p>
+<h3 id="how-does-shap-work">How does SHAP work?</h3>
+<p>To understand how SHAP works, consider a game. Multiple players are involved and there is a very specific outcome to the play, that could be either a win or a loss. Shapley values allow me to attribute the outcome of the game to the individual players involved in it.</p>
+<h3 id="but-how-this-could-be-translated-into-the-ml-world">But how this could be translated into the ML world?</h3>
+<p>In <em>our</em> case, the individual players would be the individual features that make up the data set, and the outcome of the play would be the model prediction. Therefore, it can be possible to explain how the predictions will correlate to the individual feature values.</p>
+<p>Using the SHAP framework, I can provide both local and global explanations. In details:</p>
+<ul>
+<li>local explanation focuses on indicating how an individual feature contributes to the final model;</li>
+<li>the global explanation takes a much more comprehensive view in trying to understand how the data in its entirety (i.e. all features) contributes to the outcome.</li>
+</ul>
+<p>SHAP framework is also very extensive, since it considers all possible combinations of feature values along with all possible outcomes. Due to this extensive nature, the SHAP framework could be very time-intensive, but also SHAP can provide me with guarantees in terms of consistency and local accuracy.</p>
+<h2 id="additional-material">Additional material</h2>
+<p>If you&rsquo;d like to gain more information about SHAP navigate to <a href="https://shap.readthedocs.io/en/latest/">this link</a>.</p>
+<p>In the next post, I&rsquo;ll go through a hands-on tutorial on how compute these feature importance scores on <strong>AWS SageMaker</strong>. See you there!</p>
+
+
+
+
+<h3>Posts in this series</h3>
+<ul>
+  
+    <li><a href="/post/aws_series/2_feature_importance_on_aws/">Chapter #3: Feature Importance on SageMaker Data Wrangler</a></li>
+  
+    <li><a href="/post/aws_series/1_feature_importance/">Chapter #2: Feature Importance With SHAP</a></li>
+  
+    <li><a href="/post/aws_series/0_statistical_bias/">Chapter #1: What Is the Statistical Bias?</a></li>
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/feature-importance/">feature importance</a><a class="tag" href="/tags/shap/">SHAP</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/sagemaker/">sagemaker</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lorenzobalzani" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Lorenzo Balzani
+        2024
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" integrity="sha384-t5CR&#43;zwDAROtph0PXGte6ia8heboACF9R5l/DiY&#43;WZ3P2lxNgvJkQk5n7GPvLMYw" crossorigin="anonymous" /><script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js" integrity="sha384-FaFLTlohFghEIZkw6VGwmf9ISTubWAVYW8tG8&#43;w2LAIftJEULZABrF9PPFv&#43;tVkH" crossorigin="anonymous"></script><script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-bHBqxz8fokvgoJ/sc17HODNxa42TlaEhB&#43;w8ZJXTc2nZf1VgEaFZeZvT4Mznfz0v"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script></body>
+</html>

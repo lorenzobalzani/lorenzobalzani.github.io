@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nlp on Lorenzo Balzani</title>
+    <link>https://lorenzobalzani.github.io/tags/nlp/</link>
+    <description>Recent content in nlp on Lorenzo Balzani</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement the self-attention mechanism in PyTorch</title>
+      <link>https://lorenzobalzani.github.io/post/self_attention/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/self_attention/</guid>
+      
+        <description>Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &#34;Attention Is All You Need&#34;.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

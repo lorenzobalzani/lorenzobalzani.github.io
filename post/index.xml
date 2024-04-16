@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Lorenzo Balzani</title>
+    <link>https://lorenzobalzani.github.io/post/</link>
+    <description>Recent content in Posts on Lorenzo Balzani</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implement the self-attention mechanism in PyTorch</title>
+      <link>https://lorenzobalzani.github.io/post/self_attention/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/self_attention/</guid>
+      
+        <description>Python implementation of the self (scaled-dot product) attention mechanism originally proposed in &#34;Attention Is All You Need&#34;.</description>
+      
+    </item>
+    
+    <item>
+      <title>Chapter #3: feature importance on SageMaker Data Wrangler</title>
+      <link>https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/</guid>
+      
+        <description>Feature importance on AWS. We&#39;ll SageMaker Data Wrangler.</description>
+      
+    </item>
+    
+    <item>
+      <title>Chapter #2: feature importance with SHAP</title>
+      <link>https://lorenzobalzani.github.io/post/aws_series/1_feature_importance/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/aws_series/1_feature_importance/</guid>
+      
+        <description>Feature importance with SHAP.</description>
+      
+    </item>
+    
+    <item>
+      <title>Chapter #1: what is the statistical bias?</title>
+      <link>https://lorenzobalzani.github.io/post/aws_series/0_statistical_bias/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/aws_series/0_statistical_bias/</guid>
+      
+        <description>Statistical bias.</description>
+      
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://lorenzobalzani.github.io/post/introduction/</link>
+      <pubDate>Tue, 26 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/introduction/</guid>
+      
+        <description>Two words to explain the motivations under the creation of this blog.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

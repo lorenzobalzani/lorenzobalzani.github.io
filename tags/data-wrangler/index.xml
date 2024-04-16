@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data wrangler on Lorenzo Balzani</title>
+    <link>https://lorenzobalzani.github.io/tags/data-wrangler/</link>
+    <description>Recent content in data wrangler on Lorenzo Balzani</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lorenzobalzani.github.io/tags/data-wrangler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chapter #3: feature importance on SageMaker Data Wrangler</title>
+      <link>https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/</link>
+      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lorenzobalzani.github.io/post/aws_series/2_feature_importance_on_aws/</guid>
+      
+        <description>Feature importance on AWS. We&#39;ll SageMaker Data Wrangler.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

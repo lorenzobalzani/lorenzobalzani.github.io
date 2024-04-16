@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      
+        Chapter #1: what&#39;s is statistical bias? |
+
+      
+      Lorenzo Balzani
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.88.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Lorenzo Balzani" />
+  <meta
+    name="description"
+    content="
+      Statistical bias.
+
+
+    "
+  />
+  
+    <meta name="google-site-verification" content="vu8FC47qAuUJH6xhZubBHWRBi2P5WUx_pRtgTUi1Tzw" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://lorenzobalzani.github.io/post/aws_series/statistical_bias/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.5557c8ff5617a01067ac258fd70b9b992506e379317b0da51e5e0f6e018b408a.js"
+      integrity="sha256-VVfI/1YXoBBnrCWP1wubmSUG43kxew2lHl4PbgGLQIo="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/>
+
+<meta name="twitter:title" content="Chapter #1: what&#39;s is statistical bias?"/>
+<meta name="twitter:description" content="Statistical bias."/>
+
+
+
+  
+  <meta property="og:title" content="Chapter #1: what&#39;s is statistical bias?" />
+<meta property="og:description" content="Statistical bias." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lorenzobalzani.github.io/post/aws_series/statistical_bias/" /><meta property="og:image" content="https://lorenzobalzani.github.io/images/wallpaper.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-28T00:00:00+00:00" /><meta property="og:site_name" content="Lorenzo Balzani" />
+<meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance_on_aws/" /><meta property="og:see_also" content="https://lorenzobalzani.github.io/post/aws_series/feature_importance/" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Chapter #1: what\u0027s is statistical bias?",
+        "headline": "Chapter #1: what\u0027s is statistical bias?",
+        "alternativeHeadline": "",
+        "description": "
+      Statistical bias.
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/statistical_bias\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Lorenzo Balzani"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-04-28T00:00:00.00Z",
+        "datePublished": "2022-04-28T00:00:00.00Z",
+        "dateModified": "2022-04-28T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Lorenzo Balzani",
+            "url": "https://lorenzobalzani.github.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/lorenzobalzani.github.io\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://lorenzobalzani.github.io/images/wallpaper.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/lorenzobalzani.github.io\/post\/aws_series\/statistical_bias\/",
+        "wordCount" : "1316",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "statistical bias"
+
+    
+      
+        ,
+
+      
+      "aws"
+
+    
+      
+        ,
+
+      
+      "sagemaker"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Lorenzo Balzani</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>BSc in CS and Engineering @ Unibo<br />Future MSc student in AI @ Unibo<br />Incoming ML intern @ Bonial, Berlin</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/lorenzobalzani/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/lorenzobalzani"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:balzanilo@icloud.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Lorenzo Balzani
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/resume.pdf"
+              
+              title=""
+              >Resume</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/contact/"
+              
+              title=""
+              >Contact</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Chapter #1: What&#39;s Is Statistical Bias?</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                4/28/2022
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">7-minute read</span>
+          </li>
+        </ul>
+
+      <h1 id="hello-there-">Hello there! 👋</h1>
+<p>As promised, I&rsquo;ll begin this brand new series of posts with a fundamental sub-process of the <strong>EDA</strong> (i.e. Explanatory Data Analysis) that every aspiring Data Scientist has to face: deal with statistical bias.
+First of all, we define a dataset as biased when it <strong>cannot</strong> comprehensively, completely, and accurately represent the underlying problem space.
+In this kind of dataset, there are more heavily weighted (or represented) instances. This leads to an unbalanced dataset and in the end, it&rsquo;s more probable to handle with a biased model (believe me, it&rsquo;s not a great deal 🤕). For example, in a fraud detection problem, fraud occurrences (i.e. positive cases) are likely to be rare and therefore they are not as represented as we wish.</p>
+<h1 id="causes">Causes</h1>
+<p>Statistical bias could be caused by multiple reasons:</p>
+<ul>
+<li>activity bias, when dealing with data extracted from social media content;</li>
+<li>societal bias, when dealing with human-generated content. It&rsquo;s a superset of the above because it could not be generated only by social media content but also in other ways. All this is due to pre-concepts and notions already present in society;</li>
+<li>selection bias, when dealing with a ML system that improve itself by asking human feedbacks, which are used to improve the model performance. For instance: the streaming service recommendation system is constantly improved by users;</li>
+<li>data drift, which I will better explain in a different post.</li>
+</ul>
+<h1 id="measuring-statistical-bias">Measuring statistical bias</h1>
+<p>Which metrics could you use to measure statistical bias? Well, you may take advantage of the following ones:</p>
+<ul>
+<li>Class imbalance (CI): for instance, let&rsquo;s consider a product reviews dataset. CI answers the question &ldquo;does a product category have disproportionately more instances than others?&quot;;</li>
+<li>Difference in Proportions of Labels (DPL): measures the imbalance of positive outcomes between different facet values. In the same example as before, it answers the question <em>&ldquo;does a product category has disproportionately higher ratings than others?&quot;</em>.</li>
+</ul>
+<h1 id="tools">Tools</h1>
+<p>Data bias could be detected with many different tools but since I use <strong>AWS</strong> I&rsquo;ll take advantage of <strong>SageMaker</strong> sub-tools.</p>
+<h2 id="sagemaker-data-wrangler">SageMaker Data Wrangler</h2>
+<p>First, I will introduce Data Wrangler. Data Wrangler provides you with capabilities to connect to different data sources. You can then visualize, apply any number of transformations and detected for your data, visualize the data, and transform the data, by applying any number of transformations, detected statistical bias in your data sets, and generate reports about it. Although it can be used for feature importance as well, in this post I&rsquo;ll mainly put my focus on statistical bias detection and generated reports on the training set.</p>
+<figure class="medium"><img src="/images/1_statistical_bias/amazon_sagemaker_data_wrangler.png"
+         alt="image"/><figcaption>
+            <p>SageMaker Data Wrangler capabilities</p>
+        </figcaption>
+</figure>
+
+<h2 id="sagemaker-clarify">Sagemaker Clarify</h2>
+<p>The second tool is Amazon SageMaker Clarify, a tool to perform statistical bias detection on your datasets. SageMaker Clarify can perform statistical bias detection and generate bias reports on your training datasets. Additionally, it can also perform bias detection in trained and deployed models. It further provides capabilities for machine learning explainability, as well as detecting drift in data and models.
+For now, I&rsquo;m going to focus on the statistical bias detection and report generation capabilities of Clarify.</p>
+<figure class="medium"><img src="/images/1_statistical_bias/amazon_sagemaker_data_clarify.png"
+         alt="image"/><figcaption>
+            <p>SageMaker Data Clarify capabilities</p>
+        </figcaption>
+</figure>
+
+<p>To start using Clarify, let&rsquo;s use the following code as a template.</p>
+<h3 id="code-snippet-1">Code snippet #1</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sagemaker</span> <span class="kn">import</span> <span class="n">clarify</span>
+
+<span class="n">clarify_processor</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">SageMakerClarifyProcessor</span><span class="p">(</span>
+    <span class="n">role</span><span class="o">=</span><span class="n">role</span><span class="p">,</span>
+    <span class="n">instance_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">instance_type</span><span class="o">=</span><span class="s1">&#39;ml.c5.2xlarge&#39;</span><span class="p">,</span>
+    <span class="n">sagemaker_session</span><span class="o">=</span><span class="n">sess</span>
+<span class="p">)</span>
+
+<span class="n">bias_report_output_path</span> <span class="o">=</span> <span class="o">&lt;&lt;</span> <span class="n">Define</span> <span class="n">S3</span> <span class="n">path</span> <span class="o">&gt;&gt;</span></code></pre></div>
+<h4 id="explanation">Explanation</h4>
+<p>As you could have imaged reading the previous code snippet, the goal is to set up a distributed cluster to scale up your bias detection process if needed.
+To achieve this, let&rsquo;s import the Clarify library from the SageMaker SDK. Once you have the Clarify library, construct the object, SageMaker Clarify Processor using the library. By using two parameters, instance type and instance count, you can scale up the distributed cluster to the capacity that you need. The instant count represents the number of nodes that are included in the cluster, and the instance type represents the processing capacity of each node in the cluster. The processing capacity is measured by the node&rsquo;s compute capacity, memory, and network capabilities. Once you have configured the distributor cluster, next, you specify an S3 location, where you want the bias report to be saved. That&rsquo;s the parameter <code>bias_report_output_path</code>.</p>
+<h3 id="code-snippet-2">Code snippet #2</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bias_data_config</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">DataConfig</span><span class="p">(</span>
+    <span class="n">s3_data_input_path</span><span class="o">=...</span><span class="p">,</span>
+    <span class="n">s3_output_path</span><span class="o">=...</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sentiment&#39;</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="n">df_balanced</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">(),</span>
+    <span class="n">dataset_type</span><span class="o">=</span><span class="s1">&#39;text/csv&#39;</span>
+<span class="p">)</span></code></pre></div>
+<h4 id="explanation-1">Explanation</h4>
+<p>Once this step is done, the next step is to configure the data config object on the Clarify library. The data config object represents the details of your data. So as you can expect, it has the input and output location of your data, in S3, as well as the label that you&rsquo;re trying to predict, using that dataset. In this case here, the label that we are trying to predict is <code>sentiment</code>.</p>
+<h3 id="code-snippet-2-1">Code snippet #2</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bias_config</span> <span class="o">=</span> <span class="n">clarify</span><span class="o">.</span><span class="n">BiasConfig</span><span class="p">(</span>
+    <span class="n">label_values_or_threshold</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">],</span>
+    <span class="n">facet_name</span><span class="o">=</span><span class="s1">&#39;product_category&#39;</span>
+<span class="p">)</span></code></pre></div>
+<h4 id="explanation-2">Explanation</h4>
+<p>Next, you configure the bias config object on Clarify library. The bias config object captures the facet or the featured name that you are trying to evaluate for bias or imbalances. In this case, you&rsquo;re trying to find out imbalances in the <code>product_category</code> feature. The parameter <code>label_values_or_threshold</code> defines the desired values for the labels.</p>
+<h3 id="code-snippet-3">Code snippet #3</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">clarify_processor</span><span class="o">.</span><span class="n">run_pre_training_bias</span><span class="p">(</span>
+    <span class="n">data_config</span><span class="o">=...</span><span class="p">,</span>
+    <span class="n">data_bias_config</span><span class="o">=...</span><span class="p">,</span>
+    <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;CI&#39;</span><span class="p">,</span> <span class="s1">&#39;DPL&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+    <span class="n">wait</span><span class="o">=&lt;&lt;</span><span class="kc">False</span><span class="o">/</span><span class="kc">True</span><span class="o">&gt;&gt;</span>
+    <span class="n">logs</span><span class="o">=&lt;&lt;</span><span class="kc">False</span><span class="o">/</span><span class="kc">True</span><span class="o">&gt;&gt;</span>
+<span class="p">)</span></code></pre></div>
+<h4 id="explanation-3">Explanation</h4>
+<p>Once you have configured those three objects, you are ready to run the pre-training bias method on the Clarify processor. In addition to specifying the data config and the data bias config that you already configured, you can also specify the methods that you want to evaluate for bias. So, these methods are the metrics that you&rsquo;ve already learned about to detect bias. The metrics here are the CI (i.e. the class imbalance), and the DPL (i.e. Difference in Proportions of Labels ). You can specify a few other methods here as well. The wait parameter specifies whether this bias detection job should block the rest of your code or should be executed in the background. Similarly, the logs parameter specifies whether you want to capture the logs or not. Once the configuration of the pre-training bias method is done, you launch this job.</p>
+<h2 id="in-the-background">In the background</h2>
+<figure class="medium"><img src="/images/1_statistical_bias/sagemaker_processing.png"
+         alt="image"/><figcaption>
+            <p>SageMaker Processing</p>
+        </figcaption>
+</figure>
+
+<p>In the background, SageMaker Clarify is using a construct called SageMaker Processing Job, which is a construct that allows you to perform any data-related tasks (e.g. pre-processing, post-processing, model evaluation, etc) at scale.
+The data is collected from the S3 bucket and then processed on this processing cluster which contains a variety of containers. By default, there are built-in containers for Sklearn, Python, and a few others that are supported. You can bring your custom container as well.
+Once the processing cluster has processed the data, the transformed data is put back in the S3 bucket.</p>
+<p>Briefly, the result of a pre-training bias will be a very detailed report on your dataset bias: you can also download it!</p>
+<h1 id="which-one-of-these-tools-should-i-use">Which one of these tools should I use?</h1>
+<p>The first option, Data Wrangler, provides you with more of a UI-based visual experience.</p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    So, if you would like to connect to multiple data sources and explore your data in a more visual format, Data Wrangler is the tool for you.
+  </div>
+</div>
+
+<div
+  class="notice
+    notice--warning
+
+  "
+>
+  <span
+    class="notice__title
+      notice__title--warning
+
+    "
+  >Warning</span><div class="notice__content">
+    Keep in mind that Data Wrangler is only using a subset of your data t detect bias in that data set.
+  </div>
+</div>
+
+<p>On the other hand, SageMaker Clarify provides you with more of an API-based approach. Additionally, Clarify also provides you with the ability to scale out the bias detection process. SageMaker Clarify uses a construct called processing jobs that allow you to configure a distributed cluster to execute your bias detection job at scale.</p>
+<div
+  class="notice"
+>
+  <span
+    class="notice__title"
+  >Info</span><div class="notice__content">
+    So, if you&rsquo;re thinking of large volumes of data then SageMaker Clarify is the tool for you so that you can take advantage of the scale and capacity offered by Cloud.
+  </div>
+</div>
+
+<h2 id="additional-material">Additional material</h2>
+<p>If you&rsquo;d like to gain more information about measuring pretraing bias let&rsquo;s have a look at <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-measure-data-bias.html">AWS documentation</a>.</p>
+<p>So, that&rsquo;s it for this post. I will write another short one as a tutorial on how to practically use <strong>SageMaker Clarify</strong>.</p>
+
+
+
+
+<h3>Posts in this Series</h3>
+<ul>
+  
+    <li><a href="/post/aws_series/feature_importance_on_aws/">Chapter #3: Feature Importance on SageMaker Data Wrangler</a></li>
+
+  
+    <li><a href="/post/aws_series/feature_importance/">Chapter #2: Feature Importance With SHAP</a></li>
+
+  
+    <li><a href="/post/aws_series/statistical_bias/">Chapter #1: What&#39;s Is Statistical Bias?</a></li>
+
+  
+</ul>
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/statistical-bias/">statistical bias</a><a class="tag" href="/tags/aws/">aws</a><a class="tag" href="/tags/sagemaker/">sagemaker</a></span>
+
+
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "lorenzobalzani" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Lorenzo Balzani
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
